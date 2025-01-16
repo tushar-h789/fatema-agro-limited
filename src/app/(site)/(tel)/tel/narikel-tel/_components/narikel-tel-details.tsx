@@ -176,7 +176,7 @@ export default function NarikelTelDetails({
 
             {/* Buttons */}
             <div className="mt-6 flex gap-4 border-b-2 pb-6">
-              <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">
+              <Button className="w-full bg-green-700 text-white px-4 py-2 rounded-md hover:bg-primary_bg transition duration-200">
                 Add to Cart
               </Button>
               <Button className="w-full bg-green-600 text-white hover:bg-green-700">

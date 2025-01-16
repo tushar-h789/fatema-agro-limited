@@ -36,7 +36,7 @@ export function BannerCarousel() {
             <Image
               src={banner1}
               alt="Banner 1"
-              className="w-full h-[80vh] object-cover"
+              className="w-full h-[90vh] object-cover"
               priority
             />
           </Link>
@@ -45,7 +45,7 @@ export function BannerCarousel() {
             <Image
               src={banner2}
               alt="Banner 2"
-              className="w-full h-[80vh] object-cover"
+              className="w-full h-[90vh] object-cover"
               priority
             />
           </Link>
@@ -54,7 +54,7 @@ export function BannerCarousel() {
             <Image
               src={banner3}
               alt="Banner 3"
-              className="w-full h-[80vh] object-cover"
+              className="w-full h-[90vh] object-cover"
               priority
             />
           </Link>

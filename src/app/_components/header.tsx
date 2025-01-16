@@ -37,12 +37,12 @@ export default function Header() {
                 placeholder='Search'
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className='border-2 border-gray-300 p-2 rounded-md w-full md:w-64 lg:w-80 flex-grow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200'
+                className='border-2 border-gray-300 p-2 rounded-md w-full md:w-64 lg:w-80 flex-grow focus:outline-none focus:ring-2 focus:bg-primary_bg focus:border-transparent transition duration-200'
                 aria-label="Search"
               />
               <button
                 type='submit'
-                className='ml-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200'
+                className='ml-2 bg-primary_bg text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-200'
               >
                 Search
               </button>

@@ -7,12 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import emailjs from 'emailjs-com';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    phone: "",
+    fullAddress: "",
     message: "",
   });
 
@@ -25,22 +27,33 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
 
-      if (response.ok) {
+    // Debug: Log form data
+    console.log("Form Submitted with Data:", formData);
+
+    // EmailJS integration
+    try {
+      const response = await emailjs.send(
+        'service_9npt1t8', // Replace with your EmailJS service ID
+        'template_0rhtq4u', // Replace with your EmailJS template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          fullAddress: formData.fullAddress,
+          message: formData.message,
+        },
+        'your_user_id' // Replace with your EmailJS user ID
+      );
+
+      if (response.status === 200) {
         setResponseMessage("আপনার বার্তা পাঠানো হয়েছে। ধন্যবাদ!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", fullAddress: "", message: "" });
       } else {
-        const data = await response.json();
-        setResponseMessage(data.error || "কিছু ভুল হয়েছে, আবার চেষ্টা করুন।");
+        setResponseMessage("কিছু ভুল হয়েছে, আবার চেষ্টা করুন।");
       }
     } catch (error) {
-      console.error("Form submission error:", error);
+      console.error("EmailJS error:", error);
       setResponseMessage("ফর্ম জমা দিতে ব্যর্থ হয়েছে।");
     }
   };
@@ -53,7 +66,7 @@ export default function ContactForm() {
             প্রয়োজনে যোগাযোগ করুন
           </CardTitle>
           <p className="text-gray-600 mt-2">
-            আপনার প্রশ্ন, পরামর্শ বা যেকোনো সহায়তার জন্য আমাদের সাথে যোগাযোগ করুন।
+            আপনার প্রশ্ন, পরামর্শ বা যেকোনো সহায়তার জন্য আমাদের সাথে যোগাযোগ করুন। 
             নিচের ফর্মটি পূরণ করে বার্তা পাঠান, আমরা দ্রুত সাড়া দেব।
           </p>
         </CardHeader>
@@ -101,23 +114,44 @@ export default function ContactForm() {
               </div>
             </div>
 
-            {/* Subject Field */}
-            <div>
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-gray-700"
-              >
-                বিষয়
-              </label>
-              <Input
-                id="subject"
-                name="subject"
-                placeholder="বার্তার বিষয় লিখুন"
-                value={formData.subject}
-                onChange={handleChange}
-                className="mt-1"
-                required
-              />
+            <div className="grid gap-6 md:grid-cols-2">
+              {/* Phone Field */}
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  ফোন নম্বর
+                </label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  placeholder="আপনার ফোন নম্বর লিখুন"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="mt-1"
+                  required
+                />
+              </div>
+
+              {/* Full Address Field */}
+              <div>
+                <label
+                  htmlFor="fullAddress"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  সম্পূর্ণ ঠিকানা
+                </label>
+                <Input
+                  id="fullAddress"
+                  name="fullAddress"
+                  placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন"
+                  value={formData.fullAddress}
+                  onChange={handleChange}
+                  className="mt-1"
+                  required
+                />
+              </div>
             </div>
 
             {/* Message Field */}
@@ -167,7 +201,7 @@ export default function ContactForm() {
           {/* Contact Info */}
           <div className="mt-8 border-t pt-6 text-center space-y-4">
             <h3 className="text-xl font-semibold text-gray-800">
-              Contact Information
+              যোগাযোগের তথ্য
             </h3>
             <p className="text-gray-600">
               📍 Naogaon Sadar, Naogaon, Rajshahi, Bangladesh <br />
@@ -179,7 +213,8 @@ export default function ContactForm() {
                 href="https://www.facebook.com/fatemaagroo"
                 className="text-blue-600 hover:text-blue-700"
                 aria-label="Facebook"
-                target="blank"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFacebook className="h-6 w-6" />
               </a>
@@ -192,8 +227,10 @@ export default function ContactForm() {
               </a>
               <a
                 href="https://www.linkedin.com/in/tushar-h789/"
-                className=" text-blue-700"
-                aria-label="Instagram"
+                className="text-blue-700"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <LinkedInLogoIcon className="h-6 w-6" />
               </a>

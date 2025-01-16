@@ -59,7 +59,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className=" bg-[#1E293B] text-white fixed top-0 left-0 z-10 w-full">
+    <nav className=" bg-[#1E293B] text-white fixed top-0 left-0 z-10 w-full border-b border-b-slate-600">
       <div className="container rounded mx-auto flex items-center justify-between py-2 px-5 lg:px-10">
         {/* Mobile menu button */}
         <div className="md:hidden">
