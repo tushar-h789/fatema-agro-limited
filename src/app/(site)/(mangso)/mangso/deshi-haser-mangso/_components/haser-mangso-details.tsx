@@ -20,9 +20,7 @@ interface ProductDetailsClientProps {
   relatedProducts: Product[];
 }
 
-const specialHasTitles = [
-    "রাজ হাঁস"
-  ];
+const specialHasTitles = ["রাজ হাঁস"];
 
 export default function HaserMangsoDetails({
   product,
@@ -32,11 +30,11 @@ export default function HaserMangsoDetails({
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedWeight, setSelectedWeight] = useState<string>("1kg");
 
-   const [basePrice, setBasePrice] = useState<number>(
+  const [basePrice, setBasePrice] = useState<number>(
     specialHasTitles.includes(product.title) ? 750 : 550
-    );
+  );
 
-useEffect(() => {
+  useEffect(() => {
     setBasePrice(specialHasTitles.includes(product.title) ? 750 : 550);
   }, [product]);
 
@@ -66,15 +64,15 @@ useEffect(() => {
     setQuantity(1); // Reset quantity when changing weight
   };
 
-//   const handleVolumeChange = (volume: string) => {
-//     setSelectedVolume(volume);
+  //   const handleVolumeChange = (volume: string) => {
+  //     setSelectedVolume(volume);
 
-//     if (volume === "1kg") setBasePrice(550);
-//     else if (volume === "2kg") setBasePrice(1090);
-//     else if (volume === "5kg") setBasePrice(2750);
+  //     if (volume === "1kg") setBasePrice(550);
+  //     else if (volume === "2kg") setBasePrice(1090);
+  //     else if (volume === "5kg") setBasePrice(2750);
 
-//     setQuantity(1); // Reset quantity when changing volume
-//   };
+  //     setQuantity(1); // Reset quantity when changing volume
+  //   };
 
   const handleNavigateToDetails = (id: string) => {
     router.push(`/mangso/deshi-haser-mangso/${id}`);
@@ -115,7 +113,7 @@ useEffect(() => {
                 <li>
                   <Button
                     className={`px-4 py-2 text-xs font-semibold rounded-full text-white ${
-                        selectedWeight === "2kg" ? "bg-primary" : "bg-gray-400"
+                      selectedWeight === "2kg" ? "bg-primary" : "bg-gray-400"
                     }`}
                     onClick={() => handleWeightChange("2kg")}
                   >
@@ -125,7 +123,7 @@ useEffect(() => {
                 <li>
                   <Button
                     className={`px-4 py-2 text-xs font-semibold rounded-full text-white ${
-                        selectedWeight === "5kg" ? "bg-primary" : "bg-gray-400"
+                      selectedWeight === "5kg" ? "bg-primary" : "bg-gray-400"
                     }`}
                     onClick={() => handleWeightChange("5kg")}
                   >
@@ -211,7 +209,18 @@ useEffect(() => {
               <Button className="w-full bg-green-700 text-white px-4 py-2 rounded-md hover:bg-primary_bg transition duration-200">
                 Add to Cart
               </Button>
-              <Button className="w-full bg-green-600 text-white hover:bg-green-700">
+              <Button
+                onClick={() =>
+                  router.push(
+                    `/orders?productName=${encodeURIComponent(
+                      product.title
+                    )}&quantity=${encodeURIComponent(
+                      `${selectedWeight}, Quantity: ${quantity}`
+                    )}&price=${encodeURIComponent(`${totalPrice}৳`)}`
+                  )
+                }
+                className="w-full bg-green-600 text-white hover:bg-green-700"
+              >
                 Buy Now
               </Button>
             </div>

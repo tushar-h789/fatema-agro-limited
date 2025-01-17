@@ -34,8 +34,8 @@ export default function ContactForm() {
     // EmailJS integration
     try {
       const response = await emailjs.send(
-        'service_9npt1t8', // Replace with your EmailJS service ID
-        'template_0rhtq4u', // Replace with your EmailJS template ID
+        'service_9npt1t8', 
+        'template_0rhtq4u',
         {
           name: formData.name,
           email: formData.email,
@@ -43,7 +43,7 @@ export default function ContactForm() {
           fullAddress: formData.fullAddress,
           message: formData.message,
         },
-        'your_user_id' // Replace with your EmailJS user ID
+        '1AXSdbPWEXJF4rnjo'  
       );
 
       if (response.status === 200) {

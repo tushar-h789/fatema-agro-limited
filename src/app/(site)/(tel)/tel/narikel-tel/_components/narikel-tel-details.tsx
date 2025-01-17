@@ -121,37 +121,46 @@ export default function NarikelTelDetails({
               </div>
 
               {/* Additional Info */}
-              <div>
-                <p>
+              <ul className="space-y-2 mt-4">
+                <li>
                   👉{" "}
                   <span className="text-primary font-semibold">
                     Fatema Agro
                   </span>{" "}
-                  আপনাদেরকে দিচ্ছে সম্পূর্ণ ভেজাল মুক্ত খাঁটি সরিষার তেল।
-                </p>
-                <ul>
-                  <li>
-                    📲 অর্ডার করতে আমাদের{" "}
-                    <span>
-                      <Link
-                        href="https://www.facebook.com/fatemaagroo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-bold text-blue-600 underline hover:text-blue-800"
-                      >
-                        পেজে
-                      </Link>
-                    </span>{" "}
-                    মেসেজ করুন অথবা ফোন করুনঃ{" "}
-                    <a
-                      href="tel:01719355375"
-                      className="text-primary font-bold hover:text-primary-dark"
+                  আপনাদেরকে দিচ্ছে সম্পূর্ণ ভেজাল মুক্ত খাঁটি নারিকেলর তেল।
+                </li>
+                <li>
+                  📲 অর্ডার করতে আমাদের{" "}
+                  <span>
+                    <Link
+                      href="https://www.facebook.com/fatemaagroo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-blue-600 underline hover:text-blue-800"
                     >
-                      01719355375
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                      পেজে
+                    </Link>
+                  </span>{" "}
+                  মেসেজ করুন অথবা ফোন করুনঃ{" "}
+                  <a
+                    href="tel:01719355375"
+                    className="text-primary font-bold hover:text-primary-dark"
+                  >
+                    01719355375
+                  </a>
+                </li>
+                <li>🚚 সারা বাংলাদেশে ক্যাশঅন হোম ডেলিভারি দিচ্ছি।</li>
+                <li>
+                  ☑️ ভালো খান সুস্থ থাকুন{" "}
+                  <span className="text-primary font-semibold">
+                    Fatema Agro
+                  </span>{" "}
+                  সার্ভিসের সাথেই থাকুন।
+                </li>
+                <li className="text-primary font-semibold">
+                  ~Enjoy The Real Taste~
+                </li>
+              </ul>
 
               {/* Quantity */}
               <div className="mt-4 flex items-center">
@@ -179,7 +188,18 @@ export default function NarikelTelDetails({
               <Button className="w-full bg-green-700 text-white px-4 py-2 rounded-md hover:bg-primary_bg transition duration-200">
                 Add to Cart
               </Button>
-              <Button className="w-full bg-green-600 text-white hover:bg-green-700">
+              <Button
+                onClick={() =>
+                  router.push(
+                    `/orders?productName=${encodeURIComponent(
+                      product.title
+                    )}&quantity=${encodeURIComponent(
+                      `${selectedVolume}, Quantity: ${quantity}`
+                    )}&price=${encodeURIComponent(`${totalPrice}৳`)}`
+                  )
+                }
+                className="w-full bg-green-600 text-white hover:bg-green-700"
+              >
                 Buy Now
               </Button>
             </div>

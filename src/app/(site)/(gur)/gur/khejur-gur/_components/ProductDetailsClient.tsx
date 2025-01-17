@@ -202,7 +202,16 @@ export default function ProductDetailsClient({
               <Button className="w-full bg-green-700 text-white px-4 py-2 rounded-md hover:bg-primary_bg transition duration-200">
                 Add to Cart
               </Button>
-              <Button className="w-full bg-green-600 text-white hover:bg-green-700">
+              <Button
+                  onClick={() =>
+                    router.push(
+                      `/orders?productName=${encodeURIComponent(product.title)}&quantity=${encodeURIComponent(
+                        `${selectedWeight}, Quantity: ${quantity}`
+                      )}&price=${encodeURIComponent(`${totalPrice}৳`)}`
+                    )
+                  }
+                className="w-full bg-green-600 text-white hover:bg-green-700"
+              >
                 Buy Now
               </Button>
             </div>
