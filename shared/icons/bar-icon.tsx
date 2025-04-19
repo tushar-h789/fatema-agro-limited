@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const BarIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     width={512}
@@ -17,4 +17,3 @@ const BarIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export default BarIcon;
-
