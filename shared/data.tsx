@@ -875,19 +875,19 @@ export const categories: Category[] = [
   {
     id: CategoryId.Desart,
     label: "desart",
-    name: "পেরা সন্দেশ (Pera Sondesh)",
-    path: "/pera-sondesh",
+    name: "মিষ্টি খাবার (Desart)",
+    path: "/desart/pera-sondesh",
     subCategories: [
       {
         id: SubCategoryId.PeraSondesh,
         label: "pera sondesh",
-        name: "প্যারা সন্দেশ",
-        path: "/pera-sondesh",
+        name: "পেরা সন্দেশ (Pera Sondesh)",
+        path: "/desart/pera-sondesh",
         image: PeraSondeshImg,
         products: [
           {
-            id: "201",
-            path: "/pera-sondesh",
+            id: "801",
+            path: "/desart/pera-sondesh",
             label: "naoga pera sondesh",
             title: "নওগাঁর বিখ্যাত প্যারা সন্দেশ (Naoga Pera Sondesh)",
             categoryId: CategoryId.Desart,

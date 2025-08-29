@@ -11,17 +11,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-
-import bgImg from "../../../public/title-bg.jpg";
-import { getProductsBySubCategory, SubCategoryId } from "../../../../shared/data";
+import {
+  getProductsBySubCategory,
+  SubCategoryId,
+} from "../../../../../../shared/data";
+import bgImg from "../../../../../public/title-bg.jpg";
 
 export default function PeraSondesh() {
   const router = useRouter();
   const subCategoryId = SubCategoryId.PeraSondesh;
 
-  const peraSondesh = getProductsBySubCategory(subCategoryId);
+  const peraSondeshProducts = getProductsBySubCategory(subCategoryId);
 
-  if (peraSondesh.length === 0) {
+  if (peraSondeshProducts.length === 0) {
     return (
       <p className="text-center my-6 text-red-500 font-semibold">
         কিছু সমস্যা হয়েছে। পণ্য পাওয়া যায়নি।
@@ -31,7 +33,7 @@ export default function PeraSondesh() {
 
   // Handler to navigate to the product details page
   const handleCardClick = (id: string) => {
-    router.push(`/tel/pera-sondesh/${id}`);
+    router.push(`/desart/pera-sondesh/${id}`);
   };
 
   return (
@@ -49,7 +51,7 @@ export default function PeraSondesh() {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {peraSondesh.map((product) => (
+          {peraSondeshProducts.map((product) => (
             <div
               key={product.id}
               className="cursor-pointer group relative transform transition duration-300 ease-in-out hover:scale-105"
