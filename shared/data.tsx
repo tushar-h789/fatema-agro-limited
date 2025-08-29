@@ -9,7 +9,7 @@ import goru from "../src/public/Images/mangso/goru/goru-mangso-1kg-01.png";
 import chagol from "../src/public/Images/mangso/khasi/khasir-mangso-01.jpg";
 import patiHas from "../src/public/Images/mangso/has/pati-has-01.webp";
 import murgi from "../src/public/Images/mangso/chiken/murgi-mangso-01.webp";
-import PeraSondeshImg from "../src/public/Images/desert/pera-sondesh/pera-sondesh.PNG";
+import PeraSondeshImg from "../src/public/Images/desert/pera-sondesh/pera-sondesh.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -888,8 +888,8 @@ export const categories: Category[] = [
           {
             id: "801",
             path: "/desart/pera-sondesh",
-            label: "naoga pera sondesh",
-            title: "নওগাঁর বিখ্যাত প্যারা সন্দেশ (Naoga Pera Sondesh)",
+            label: "Pera sondesh",
+            title: "নওগাঁর বিখ্যাত প্যারা সন্দেশ (Pera Sondesh)",
             categoryId: CategoryId.Desart,
             subCategoryId: SubCategoryId.PeraSondesh,
             subCategoryName: "প্যারা সন্দেশ",
