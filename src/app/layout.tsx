@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-
 // Local font configuration for Geist Sans
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,14 +20,11 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "fatemaagro - for authentic product",
-  description:
-    "Discover the latest in authentic products at fatemaagro.",
+  description: "Discover the latest in authentic products at fatemaagro.",
 
   // Basic metadata
   applicationName: "fatemaagro",
-  authors: [
-    { name: "fatemaagro Team", url: "https://fatemaagro.com" },
-  ],
+  authors: [{ name: "fatemaagro Team", url: "https://fatemaagro.com" }],
   generator: "Next.js",
   keywords: [
     "fatemaagro",
@@ -58,8 +54,7 @@ export const metadata: Metadata = {
   // Open Graph metadata
   openGraph: {
     title: "fatemaagro - for authentic product",
-    description:
-      "Shop the latest authentic product at fatemaagro.",
+    description: "Shop the latest authentic product at fatemaagro.",
     url: "https://fatemaagro.com",
     siteName: "fatemaagro",
     images: [
@@ -78,8 +73,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "fatemaagro - authentic products for Everyone",
-    description:
-      "Discover trendy clothing at fatemaagro.",
+    description: "Discover trendy clothing at fatemaagro.",
     creator: "@fatemaagroFashion",
     images: ["https://fatemaagro.com/twitter-image.jpg"],
   },
@@ -139,18 +133,17 @@ export const metadata: Metadata = {
   publisher: "fatemaagro",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode; 
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"> 
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mt-5`}
       >
-        {children} 
+        {children}
       </body>
     </html>
   );

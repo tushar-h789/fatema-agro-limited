@@ -28,10 +28,10 @@ export default function SorisaTelDetails({
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedVolume, setSelectedVolume] = useState<string>("1L");
 
-  const [basePrice, setBasePrice] = useState<number>(300);
+  const [basePrice, setBasePrice] = useState<number>(240);
 
   useEffect(() => {
-    setBasePrice(300); // Default base price for 1L mustard oil
+    setBasePrice(240); // Default base price for 1L mustard oil
   }, [product]);
 
   const totalPrice = basePrice * quantity;
@@ -47,9 +47,9 @@ export default function SorisaTelDetails({
   const handleVolumeChange = (volume: string) => {
     setSelectedVolume(volume);
 
-    if (volume === "1L") setBasePrice(300);
-    else if (volume === "2L") setBasePrice(590);
-    else if (volume === "5L") setBasePrice(1450);
+    if (volume === "1L") setBasePrice(240);
+    else if (volume === "2L") setBasePrice(480);
+    else if (volume === "5L") setBasePrice(1150);
 
     setQuantity(1); // Reset quantity when changing volume
   };
