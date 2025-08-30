@@ -31,11 +31,11 @@ export default function HaserMangsoDetails({
   const [selectedWeight, setSelectedWeight] = useState<string>("1kg");
 
   const [basePrice, setBasePrice] = useState<number>(
-    specialHasTitles.includes(product.title) ? 750 : 550
+    specialHasTitles.includes(product.title) ? 750 : 750
   );
 
   useEffect(() => {
-    setBasePrice(specialHasTitles.includes(product.title) ? 750 : 550);
+    setBasePrice(specialHasTitles.includes(product.title) ? 750 : 800);
   }, [product]);
 
   const totalPrice = basePrice * quantity;
@@ -56,9 +56,9 @@ export default function HaserMangsoDetails({
       else if (weight === "2kg") setBasePrice(1490);
       else if (weight === "5kg") setBasePrice(3700);
     } else {
-      if (weight === "1kg") setBasePrice(550);
-      else if (weight === "2kg") setBasePrice(1090);
-      else if (weight === "5kg") setBasePrice(2700);
+      if (weight === "1kg") setBasePrice(800);
+      else if (weight === "2kg") setBasePrice(1590);
+      else if (weight === "5kg") setBasePrice(3950);
     }
 
     setQuantity(1); // Reset quantity when changing weight
