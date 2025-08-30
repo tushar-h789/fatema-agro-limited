@@ -7,8 +7,10 @@ import chicken from "../src/public/Images/mangso/chiken/deshi-murgi-03.png";
 // import product6 from "../src/public/Images/product-6.png";
 import goru from "../src/public/Images/mangso/goru/goru-mangso-1kg-01.png";
 import chagol from "../src/public/Images/mangso/khasi/khasir-mangso-01.jpg";
-import patiHas from "../src/public/Images/mangso/has/pati-has-01.webp";
-import murgi from "../src/public/Images/mangso/chiken/murgi-mangso-01.webp";
+import patiHas from "../src/public/Images/mangso/has/pati-has-01.jpg";
+import rajHas from "../src/public/Images/mangso/has/raj-has.jpg";
+import murgi from "../src/public/Images/mangso/chiken/deshi-murgi.jpeg";
+import koyelPakhi from "../src/public/Images/mangso/chiken/koel-pakhi.jpg";
 import PeraSondeshImg from "../src/public/Images/desert/pera-sondesh/pera-sondesh.jpg";
 
 import { StaticImageData } from "next/image";
@@ -508,7 +510,7 @@ export const categories: Category[] = [
             quantity: "1 কেজি",
             description:
               "রাজ হাঁস প্রাচীনকাল থেকেই বাংলার অন্যতম গৃহপালিত প্রাণী। রাজহাঁসের মাংস ও ডিম দুটোই খেতে খুবই সুস্বাদু ও অতুলনীয়। ",
-            image: patiHas,
+            image: rajHas,
           },
         ],
       },
@@ -528,11 +530,11 @@ export const categories: Category[] = [
             categoryId: CategoryId.Meat,
             subCategoryId: SubCategoryId.DesiChicken,
             subCategoryName: "দেশি মুরগি",
-            price: 750,
+            price: 800,
             quantity: "1 কেজি",
             description:
               "দেশি মুরগি প্রাচীনকাল থেকেই বাংলার অন্যতম গৃহপালিত প্রাণী। মুরগি মাংস ও ডিম দুটোই খেতে খুবই সুস্বাদু ও অতুলনীয়। ",
-            image: chicken,
+            image: murgi,
           },
           {
             id: "408",
@@ -546,7 +548,7 @@ export const categories: Category[] = [
             quantity: "1 কেজি",
             description:
               "দেশি মুরগি প্রাচীনকাল থেকেই বাংলার অন্যতম গৃহপালিত প্রাণী। মুরগি মাংস ও ডিম দুটোই খেতে খুবই সুস্বাদু ও অতুলনীয়। ",
-            image: murgi,
+            image: koyelPakhi,
           },
         ],
       },

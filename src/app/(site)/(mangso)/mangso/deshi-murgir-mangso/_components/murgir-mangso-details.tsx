@@ -28,10 +28,10 @@ export default function MurgirMangsoDetails({
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedVolume, setSelectedVolume] = useState<string>("1kg");
 
-  const [basePrice, setBasePrice] = useState<number>(550);
+  const [basePrice, setBasePrice] = useState<number>(800);
 
   useEffect(() => {
-    setBasePrice(550); // Default base price for 1L mustard oil
+    setBasePrice(800); // Default base price for 1L mustard oil
   }, [product]);
 
   const totalPrice = basePrice * quantity;
@@ -47,9 +47,9 @@ export default function MurgirMangsoDetails({
   const handleVolumeChange = (volume: string) => {
     setSelectedVolume(volume);
 
-    if (volume === "1kg") setBasePrice(550);
-    else if (volume === "2kg") setBasePrice(1090);
-    else if (volume === "5kg") setBasePrice(2700);
+    if (volume === "1kg") setBasePrice(800);
+    else if (volume === "2kg") setBasePrice(1590);
+    else if (volume === "5kg") setBasePrice(3950);
 
     setQuantity(1); // Reset quantity when changing volume
   };
