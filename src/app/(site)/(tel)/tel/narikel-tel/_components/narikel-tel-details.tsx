@@ -28,10 +28,10 @@ export default function NarikelTelDetails({
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedVolume, setSelectedVolume] = useState<string>("1L");
 
-  const [basePrice, setBasePrice] = useState<number>(300);
+  const [basePrice, setBasePrice] = useState<number>(950);
 
   useEffect(() => {
-    setBasePrice(300); // Default base price for 1L mustard oil
+    setBasePrice(950); // Default base price for 1L mustard oil
   }, [product]);
 
   const totalPrice = basePrice * quantity;
@@ -47,9 +47,9 @@ export default function NarikelTelDetails({
   const handleVolumeChange = (volume: string) => {
     setSelectedVolume(volume);
 
-    if (volume === "1L") setBasePrice(300);
-    else if (volume === "2L") setBasePrice(590);
-    else if (volume === "5L") setBasePrice(1450);
+    if (volume === "1L") setBasePrice(950);
+    else if (volume === "2L") setBasePrice(1900);
+    else if (volume === "5L") setBasePrice(4750);
 
     setQuantity(1); // Reset quantity when changing volume
   };

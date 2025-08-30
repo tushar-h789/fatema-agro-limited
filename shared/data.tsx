@@ -180,7 +180,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.Oil,
             subCategoryId: SubCategoryId.CoconutOil,
             subCategoryName: "নারিকেল তেল",
-            price: 300,
+            price: 950,
             quantity: "1 কেজি",
             description: "নারিকেল তেলের বিস্তারিত বর্ণনা।",
             image: product2,
