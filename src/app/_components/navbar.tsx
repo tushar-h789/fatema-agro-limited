@@ -5,7 +5,9 @@ import { usePathname, useRouter } from "next/navigation"; // Add useRouter to ha
 import { categories } from "../../../shared/data";
 import Link from "next/link";
 import CartIcon from "../../../shared/icons/cart-icon";
-import { Menu, X } from 'lucide-react'; // Add this import
+import { Menu, X } from "lucide-react"; // Add this import
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
 const Navbar = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -62,7 +64,7 @@ const Navbar = () => {
     <nav className="bg-[#1E293B] text-white fixed top-0 left-0 z-50 w-full border-b border-b-slate-600">
       <div className="container mx-auto flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="w-full md:hidden flex items-center flex-row-reverse justify-between">
           <button
             onClick={handleMobileMenuToggle}
             aria-label="Toggle mobile menu"
@@ -74,20 +76,33 @@ const Navbar = () => {
               <Menu className="w-6 h-6" />
             )}
           </button>
+
+          <Link href="/">
+            <Image src={logo} alt="Company Logo" width={60} height={50} />
+          </Link>
         </div>
 
         {/* Categories dropdown for desktop */}
         <div className="relative hidden md:block z-50">
-          <button
-            className="btn btn-outline p-2 bg-slate-600 px-3 py-2 rounded-xl hover:bg-slate-700 ease-linear duration-150"
-            aria-haspopup="true"
-            aria-expanded={isDropdownVisible}
-            onMouseEnter={() => setDropdownVisible(true)}
-            onMouseLeave={() => setDropdownVisible(false)}
-            onClick={() => setDropdownVisible((prev) => !prev)}
-          >
-            সকল ক্যাটাগরী
-          </button>
+          <div className="flex items-center gap-2">
+            <div>
+              <Link href="/">
+                <Image src={logo} alt="Company Logo" width={60} height={50} />
+              </Link>
+            </div>
+            <div>
+              <button
+                className="btn btn-outline p-2 bg-slate-600 px-3 py-2 rounded-xl hover:bg-slate-700 ease-linear duration-150"
+                aria-haspopup="true"
+                aria-expanded={isDropdownVisible}
+                onMouseEnter={() => setDropdownVisible(true)}
+                onMouseLeave={() => setDropdownVisible(false)}
+                onClick={() => setDropdownVisible((prev) => !prev)}
+              >
+                সকল ক্যাটাগরী
+              </button>
+            </div>
+          </div>
 
           {isDropdownVisible && (
             <ul
@@ -230,46 +245,53 @@ const Navbar = () => {
           <div className="px-4 py-6 space-y-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
             <ul className="space-y-4">
               {categories.map((category) => (
-                <li key={category.label} className="border-b pb-2 flex flex-col">
-                  <div className="flex justify-between">
-                    <Link
-                      href={category.path}
-                      className={`${
-                        currentPath === category.path
-                          ? "text-primary font-bold"
-                          : "text-gray-700"
-                      }`}
-                    >
-                      {category.name}
-                    </Link>
-                    <span
-                      className={`${
-                        currentPath === category.path
-                          ? "text-primary"
-                          : "text-gray-500"
-                      }`}
-                    >
-                      ({categoryProductCounts[category.name] || 0})
-                    </span>
-                  </div>
-                  {/* Subcategories for mobile */}
-                  <ul className="pl-4 mt-2 space-y-2">
-                    {category.subCategories.map((subCategory) => (
-                      <li key={subCategory.id}>
-                        <button
-                          onClick={() => handleSubcategoryClick(subCategory.path)}
-                          className={`${
-                            currentPath === subCategory.path
-                              ? "text-primary font-bold"
-                              : "text-gray-700"
-                          }`}
-                        >
-                          {subCategory.name}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
+                <>
+                  <li
+                    key={category.label}
+                    className="border-b pb-2 flex flex-col"
+                  >
+                    <div className="flex justify-between">
+                      <Link
+                        href={category.path}
+                        className={`${
+                          currentPath === category.path
+                            ? "text-primary font-bold"
+                            : "text-gray-700"
+                        }`}
+                      >
+                        {category.name}
+                      </Link>
+                      <span
+                        className={`${
+                          currentPath === category.path
+                            ? "text-primary"
+                            : "text-gray-500"
+                        }`}
+                      >
+                        ({categoryProductCounts[category.name] || 0})
+                      </span>
+                    </div>
+                    {/* Subcategories for mobile */}
+                    <ul className="pl-4 mt-2 space-y-2">
+                      {category.subCategories.map((subCategory) => (
+                        <li key={subCategory.id}>
+                          <button
+                            onClick={() =>
+                              handleSubcategoryClick(subCategory.path)
+                            }
+                            className={`${
+                              currentPath === subCategory.path
+                                ? "text-primary font-bold"
+                                : "text-gray-700"
+                            }`}
+                          >
+                            {subCategory.name}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                </>
               ))}
             </ul>
           </div>

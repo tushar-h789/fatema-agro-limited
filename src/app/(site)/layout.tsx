@@ -12,7 +12,7 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
     <div>
       {/* <TopBar/> */}
       <div className="bg-[#1E293B]">
-        <Header />
+        {/* <Header /> */}
         <Navbar />
       </div>
       <main className="container mx-auto">{children}</main>

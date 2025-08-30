@@ -7,8 +7,10 @@ import chicken from "../src/public/Images/mangso/chiken/deshi-murgi-03.png";
 // import product6 from "../src/public/Images/product-6.png";
 import goru from "../src/public/Images/mangso/goru/goru-mangso-1kg-01.png";
 import chagol from "../src/public/Images/mangso/khasi/khasir-mangso-01.jpg";
-import patiHas from "../src/public/Images/mangso/has/pati-has-01.webp";
-import murgi from "../src/public/Images/mangso/chiken/murgi-mangso-01.webp";
+import patiHas from "../src/public/Images/mangso/has/pati-has-01.jpg";
+import rajHas from "../src/public/Images/mangso/has/raj-has.jpg";
+import murgi from "../src/public/Images/mangso/chiken/deshi-murgi.jpeg";
+import koyelPakhi from "../src/public/Images/mangso/chiken/koel-pakhi.jpg";
 import PeraSondeshImg from "../src/public/Images/desert/pera-sondesh/pera-sondesh.jpg";
 
 import { StaticImageData } from "next/image";
@@ -143,7 +145,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.Oil,
             subCategoryId: SubCategoryId.MustardOil,
             subCategoryName: "সরিষার তেল",
-            price: 300,
+            price: 240,
             quantity: "1 কেজি",
             description:
               "সরিষার তেল দক্ষিণ এশিয়ার রান্নাঘরের একটি গুরুত্বপূর্ণ উপাদান, যা শুধুমাত্র স্বাদের জন্য নয়, বরং স্বাস্থ্যগত উপকারিতার জন্যও প্রশংসিত। সরিষার বীজ থেকে নিষ্কাশিত এই তেল ওমেগা-৩ ফ্যাটি অ্যাসিড সমৃদ্ধ, যা হৃদরোগ প্রতিরোধে সাহায্য করে। এর বিশেষ পুষ্টিগুণ খাবারের স্বাদকে বাড়িয়ে তোলে এবং বিভিন্ন রান্নার পদ্ধতিতে ব্যবহৃত হয়, যেমন ভাজা, তলায় ভাজা এবং সালাদ ড্রেসিং। সরিষার তেল হজম শক্তি বাড়ানোর পাশাপাশি শ্বাসকষ্টের জন্যও কার্যকর। তেলের অ্যান্টিব্যাকটেরিয়াল গুণ ত্বক ও চুলের যত্নেও সাহায্য করে। প্রচুর মানুষ এই তেলকে ম্যাসাজের জন্য ব্যবহার করেন, যা রক্ত চলাচল উন্নত করতে সাহায্য করে এবং পুষ্টি প্রদান করে। রান্না বা চিকিৎসার জন্য ব্যবহার করা হোক, সরিষার তেল আমাদের খাদ্যতালিকায় একটি অপরিহার্য উপাদান হিসেবে বিবেচিত হয়, যা তার বহুমুখীতা এবং পুষ্টিগুণের জন্য বিখ্যাত।",
@@ -180,7 +182,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.Oil,
             subCategoryId: SubCategoryId.CoconutOil,
             subCategoryName: "নারিকেল তেল",
-            price: 300,
+            price: 950,
             quantity: "1 কেজি",
             description: "নারিকেল তেলের বিস্তারিত বর্ণনা।",
             image: product2,
@@ -418,7 +420,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.Meat,
             subCategoryId: SubCategoryId.Cow,
             subCategoryName: "গরু",
-            price: 220,
+            price: 750,
             quantity: "1 কেজি",
             description: "গরুর বিস্তারিত বর্ণনা।",
             image: goru,
@@ -431,7 +433,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.Meat,
             subCategoryId: SubCategoryId.Cow,
             subCategoryName: "গরু",
-            price: 220,
+            price: 750,
             quantity: "1 কেজি",
             description: "গরুর বিস্তারিত বর্ণনা।",
             image: goru,
@@ -490,7 +492,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.Meat,
             subCategoryId: SubCategoryId.Duck,
             subCategoryName: "দেশি হাঁস",
-            price: 550,
+            price: 800,
             quantity: "1 কেজি",
             description:
               "দেশি হাঁস প্রাচীনকাল থেকেই বাংলার অন্যতম গৃহপালিত প্রাণী। হাঁসের মাংস ও ডিম দুটোই খেতে খুবই সুস্বাদু ও অতুলনীয়। ",
@@ -504,11 +506,11 @@ export const categories: Category[] = [
             categoryId: CategoryId.Meat,
             subCategoryId: SubCategoryId.Duck,
             subCategoryName: "রাজ হাঁস",
-            price: 750,
+            price: 850,
             quantity: "1 কেজি",
             description:
               "রাজ হাঁস প্রাচীনকাল থেকেই বাংলার অন্যতম গৃহপালিত প্রাণী। রাজহাঁসের মাংস ও ডিম দুটোই খেতে খুবই সুস্বাদু ও অতুলনীয়। ",
-            image: patiHas,
+            image: rajHas,
           },
         ],
       },
@@ -528,25 +530,25 @@ export const categories: Category[] = [
             categoryId: CategoryId.Meat,
             subCategoryId: SubCategoryId.DesiChicken,
             subCategoryName: "দেশি মুরগি",
-            price: 550,
+            price: 800,
             quantity: "1 কেজি",
             description:
               "দেশি মুরগি প্রাচীনকাল থেকেই বাংলার অন্যতম গৃহপালিত প্রাণী। মুরগি মাংস ও ডিম দুটোই খেতে খুবই সুস্বাদু ও অতুলনীয়। ",
-            image: chicken,
+            image: murgi,
           },
           {
             id: "408",
             path: "/mangso/deshi-murgir-mangso",
             label: "Murgi",
-            title: "দেশি মুরগি Chiken",
+            title: "কোয়েল পাখি",
             categoryId: CategoryId.Meat,
             subCategoryId: SubCategoryId.DesiChicken,
-            subCategoryName: "দেশি মুরগি",
-            price: 550,
+            subCategoryName: "কোয়েল পাখি",
+            price: 750,
             quantity: "1 কেজি",
             description:
               "দেশি মুরগি প্রাচীনকাল থেকেই বাংলার অন্যতম গৃহপালিত প্রাণী। মুরগি মাংস ও ডিম দুটোই খেতে খুবই সুস্বাদু ও অতুলনীয়। ",
-            image: murgi,
+            image: koyelPakhi,
           },
         ],
       },
