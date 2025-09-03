@@ -141,6 +141,7 @@ const Navbar = () => {
 
                       {hoveredCategory === "Electronics" && (
                         <ul className="absolute top-0 left-full w-72 menu p-2 bg-white border border-gray-200 shadow-lg rounded-lg">
+                          {/* TV Subcategory */}
                           <li
                             className={`py-2 px-4 border-b relative ${
                               currentPath?.startsWith("/tv")
@@ -155,6 +156,18 @@ const Navbar = () => {
                               টিভি (TV)
                             </Link>
                           </li>
+                          
+                          {/* Future Electronics Items - Commented for now */}
+                          {/* <li className="py-2 px-4 border-b relative hover:bg-slate-50">
+                            <Link href="/electronics/fridge" className="text-gray-700">
+                              ফ্রিজ (Fridge)
+                            </Link>
+                          </li>
+                          <li className="py-2 px-4 border-b relative hover:bg-slate-50">
+                            <Link href="/electronics/ac" className="text-gray-700">
+                              এয়ার কন্ডিশনার (AC)
+                            </Link>
+                          </li> */}
                         </ul>
                       )}
                     </>
@@ -287,46 +300,111 @@ const Navbar = () => {
                     key={category.label}
                     className="border-b pb-2 flex flex-col"
                   >
-                    <div className="flex justify-between">
-                      <Link
-                        href={category.path}
-                        className={`${
-                          currentPath === category.path
-                            ? "text-primary font-bold"
-                            : "text-gray-700"
-                        }`}
-                      >
-                        {category.name}
-                      </Link>
-                      <span
-                        className={`${
-                          currentPath === category.path
-                            ? "text-primary"
-                            : "text-gray-500"
-                        }`}
-                      >
-                        ({categoryProductCounts[category.name] || 0})
-                      </span>
-                    </div>
-                    {/* Subcategories for mobile */}
-                    <ul className="pl-4 mt-2 space-y-2">
-                      {category.subCategories.map((subCategory) => (
-                        <li key={subCategory.id}>
-                          <button
-                            onClick={() =>
-                              handleSubcategoryClick(subCategory.path)
-                            }
+                    {/* Handle Electronics category specially for mobile */}
+                    {category.id === CategoryId.TV ? (
+                      <>
+                        {/* Electronics main category */}
+                        <div className="flex justify-between">
+                          <span
                             className={`${
-                              currentPath === subCategory.path
+                              currentPath?.startsWith("/tv")
                                 ? "text-primary font-bold"
                                 : "text-gray-700"
                             }`}
                           >
-                            {subCategory.name}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
+                            ইলেকট্রনিক্স (Electronics)
+                          </span>
+                          <span
+                            className={`${
+                              currentPath?.startsWith("/tv")
+                                ? "text-primary"
+                                : "text-gray-500"
+                            }`}
+                          >
+                            ({categoryProductCounts[category.name] || 0})
+                          </span>
+                        </div>
+                        
+                        {/* Electronics subcategories */}
+                        <ul className="pl-4 mt-2 space-y-2">
+                          {/* TV Subcategory */}
+                          <li>
+                            <button
+                              onClick={() => handleSubcategoryClick("/tv")}
+                              className={`${
+                                currentPath?.startsWith("/tv")
+                                  ? "text-primary font-bold"
+                                  : "text-gray-700"
+                              }`}
+                            >
+                              টিভি (TV)
+                            </button>
+                          </li>
+                          
+                          {/* Future Electronics Items - Commented for now */}
+                          {/* <li>
+                            <button
+                              onClick={() => handleSubcategoryClick("/electronics/fridge")}
+                              className="text-gray-700"
+                            >
+                              ফ্রিজ (Fridge)
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => handleSubcategoryClick("/electronics/ac")}
+                              className="text-gray-700"
+                            >
+                              এয়ার কন্ডিশনার (AC)
+                            </button>
+                          </li> */}
+                        </ul>
+                      </>
+                    ) : (
+                      <>
+                        {/* Regular categories */}
+                        <div className="flex justify-between">
+                          <Link
+                            href={category.path}
+                            className={`${
+                              currentPath === category.path
+                                ? "text-primary font-bold"
+                                : "text-gray-700"
+                            }`}
+                          >
+                            {category.name}
+                          </Link>
+                          <span
+                            className={`${
+                              currentPath === category.path
+                                ? "text-primary"
+                                : "text-gray-500"
+                            }`}
+                          >
+                            ({categoryProductCounts[category.name] || 0})
+                          </span>
+                        </div>
+                        {/* Subcategories for regular categories */}
+                        <ul className="pl-4 mt-2 space-y-2">
+                          {category.subCategories.map((subCategory) => (
+                            <li key={subCategory.id}>
+                              <button
+                                onClick={() =>
+                                  handleSubcategoryClick(subCategory.path)
+                                }
+                                className={`${
+                                  currentPath === subCategory.path
+                                    ? "text-primary font-bold"
+                                    : "text-gray-700"
+                                }`}
+                              >
+                                {subCategory.name}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
                   </li>
                 </>
               ))}
