@@ -31,6 +31,9 @@ export default function TVDetailsPage({ params }: Params) {
             className="object-cover"
           />
         </div>
+        <div>
+        <h1 className="text-2xl font-semibold">{product.title}</h1>
+        </div>
         <div className="mt-10 space-y-4">
           <p className="text-muted-foreground leading-7 whitespace-pre-line">
             {product.description}
