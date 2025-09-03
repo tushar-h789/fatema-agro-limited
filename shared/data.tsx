@@ -12,6 +12,8 @@ import murgi from "../src/public/Images/mangso/chiken/deshi-murgi.jpeg";
 import koyelPakhi from "../src/public/Images/mangso/chiken/koel-pakhi.jpg";
 import PeraSondeshImg from "../src/public/Images/desert/pera-sondesh/pera-sondesh.jpg";
 import samsung32 from "../src/public/Images/tv/Samsung 32″ Smart HD TV  UA32T4400AR.jpg";
+import samsung43 from "../src/public/Images/tv/Samsung 43″ 4K Smart UHD TV.jpg";
+import samsung43Crystal from "../src/public/Images/tv/free gift - Samsung 43″ Crystal 4K UHD Smart TV.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -89,6 +91,8 @@ export enum SubCategoryId {
   PeraSondesh = "8.1",
   // TV subcategories
   Samsung = "9.1",
+  Samsung43 = "9.2",
+  Samsung43Crystal = "9.3",
 }
 
 // Product interface
@@ -937,6 +941,34 @@ export const categories: Category[] = [
             description:
               "Samsung UA32T4400AR একটি 32-ইঞ্চি স্মার্ট HD টিভি যা Tizen™ অপারেটিং সিস্টেমে চলে। Quad Core প্রসেসর দ্বারা চালিত এই টিভিতে রয়েছে PurColor প্রযুক্তি, HDR সাপোর্ট এবং পরিষ্কার অডিওর জন্য Dolby Digital Plus। 2×HDMI, 1×USB, বিল্ট-ইন Wi‑Fi এবং Smart View সহ সহজ কানেক্টিভিটি। স্টাইলিশ বেজেল-লেস ডিজাইন, হালকা ওজন (প্রায় 4.1 কেজি) এবং স্যামসাং-এর নির্ভরযোগ্য সাপোর্টের সাথে এটি আপনার লিভিং রুমে একটি প্রিমিয়াম অভিজ্ঞতা নিশ্চিত করে। ওয়ারেন্টি: LED প্যানেল ২ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ৫ বছর।",
             image: samsung32,
+          },
+          {
+            id: "902",
+            path: "/tv/samsung",
+            label: "Samsung 43″ 4K Smart UHD TV",
+            title: "Samsung 43″ 4K Smart UHD TV",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Samsung,
+            subCategoryName: "Samsung",
+            price: 89990,
+            size: "43″",
+            description:
+              "Samsung 43″ 4K Smart UHD TV একটি প্রিমিয়াম 4K রেজোলিউশন টিভি যা Crystal Processor 4K প্রযুক্তি ব্যবহার করে। এই টিভিতে রয়েছে HDR 10 সাপোর্ট, Auto Motion Plus, Dolby Digital Plus অডিও, এবং 20W সাউন্ড আউটপুট। Tizen™ অপারেটিং সিস্টেমে চালিত এই টিভিতে রয়েছে WiFi, Bluetooth Audio, 3×HDMI, 2×USB পোর্ট এবং AirSlim ডিজাইন। 4K রেজোলিউশন (3,840 x 2,160) এবং 2200 PQI (Picture Quality Index) সহ এই টিভি আপনার বাড়িতে সিনেমা হলের অভিজ্ঞতা নিশ্চিত করে। ওয়ারেন্টি: LED প্যানেল ২ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ৫ বছর।",
+            image: samsung43,
+          },
+          {
+            id: "903",
+            path: "/tv/samsung",
+            label: "Samsung 43″ Crystal 4K UHD Smart TV",
+            title: "Samsung 43″ Crystal 4K UHD Smart TV | Free Gift Available",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Samsung,
+            subCategoryName: "Samsung",
+            price: 94990,
+            size: "43″",
+            description:
+              "Samsung 43″ Crystal 4K UHD Smart TV একটি বিশেষ সংস্করণ যা ফ্রি গিফট সহ আসে। এই টিভিতে রয়েছে Crystal Processor 4K, HDR 10 সাপোর্ট, এবং Dolby Digital Plus অডিও। 4K রেজোলিউশন (3,840 x 2,160) সহ এই টিভি Crystal Display প্রযুক্তি ব্যবহার করে যা ছবিকে আরও উজ্জ্বল এবং স্পষ্ট করে তোলে। Tizen™ অপারেটিং সিস্টেম, WiFi, Bluetooth Audio, 3×HDMI, 2×USB পোর্ট এবং AirSlim ডিজাইন সহ এই টিভি আপনার বাড়িতে প্রিমিয়াম অভিজ্ঞতা নিশ্চিত করে। বিশেষ অফার: ফ্রি গিফট সহ। ওয়ারেন্টি: LED প্যানেল ২ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ৫ বছর।",
+            image: samsung43Crystal,
           },
         ],
       },
