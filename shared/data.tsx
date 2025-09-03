@@ -1123,3 +1123,32 @@ export const getAllProducts = (): Product[] => {
     category.subCategories.flatMap((subCategory) => subCategory.products)
   );
 };
+
+// Function to get products with size property, sorted from small to large
+export const getProductsWithSizeSorted = (): Product[] => {
+  // Get all products
+  const allProducts = getAllProducts();
+  
+  // Separate products by category
+  const nonTVProducts = allProducts.filter(product => product.categoryId !== CategoryId.TV);
+  const tvProducts = allProducts.filter(product => product.categoryId === CategoryId.TV);
+  
+  // Sort TV products with size from small to large (choto theke boro)
+  const tvProductsWithSize = tvProducts.filter(product => product.size);
+  const tvProductsWithoutSize = tvProducts.filter(product => !product.size);
+  
+  const sortedTVProductsWithSize = tvProductsWithSize.sort((a, b) => {
+    // Extract numeric value from size string (e.g., "32″" → 32)
+    const sizeA = parseInt(a.size!.replace(/[^\d]/g, ''));
+    const sizeB = parseInt(b.size!.replace(/[^\d]/g, ''));
+    
+    return sizeA - sizeB; // Ascending order (small to large)
+  });
+  
+  // Return: original products first, then sorted TV products with size, then TV products without size
+  return [
+    ...nonTVProducts, // Original products (Oil, Jaggery, Meat, Desert)
+    ...sortedTVProductsWithSize, // TV products with size (sorted small to large)
+    ...tvProductsWithoutSize // TV products without size
+  ];
+};

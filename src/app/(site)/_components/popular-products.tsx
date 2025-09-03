@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { getAllProducts } from "../../../../shared/data"; // Importing the function to get all products
+import { getProductsWithSizeSorted } from "../../../../shared/data"; // Importing the function to get products with size sorted
 import {
   Card,
   CardDescription,
@@ -17,8 +17,8 @@ import bgImg from "../../../public/title-bg.jpg";
 export default function PopularProducts() {
   const router = useRouter();
 
-  // Get all products from categories
-  const products = getAllProducts();
+  // Get products with size property, sorted from small to large
+  const products = getProductsWithSizeSorted();
   console.log(products);
 
   // Helper function to truncate description to 8 words
@@ -38,9 +38,12 @@ export default function PopularProducts() {
           className="relative bg-cover bg-center bg-no-repeat rounded-r-full lg:w-[1000px]"
           style={{ backgroundImage: `url(${bgImg.src})` }}
         >
-          <h2 className="text-center mb-8 text-2xl font-bold text-slate-100 border-b-2 py-10 bg-gradient-to-r from-green-700  bg-opacity-40">
-            পপুলার পণ্য
+          <h2 className="text-center mb-2 text-2xl font-bold text-slate-100 border-b-2 py-10 bg-gradient-to-r from-green-700  bg-opacity-40">
+            সব পণ্য (All Products)
           </h2>
+          <p className="text-center text-sm text-slate-200 mb-4">
+            মূল পণ্য প্রথমে, টিভি সাইজ অনুযায়ী শেষে (Original products first, TV by size at end)
+          </p>
         </div>
 
         {/* Products Grid */}
@@ -64,6 +67,11 @@ export default function PopularProducts() {
                   <div className="absolute top-2 right-2 bg-blue-600 text-white text-xs font-semibold px-4 py-1 rounded-full shadow-md">
                     {product.subCategoryName}
                   </div>
+                  {product.size && (
+                    <div className="absolute top-2 left-2 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                      {product.size}
+                    </div>
+                  )}
                 </div>
 
                 {/* Card Content */}
@@ -89,6 +97,11 @@ export default function PopularProducts() {
                       ? `Quantity: ${product.quantity}`
                       : ""}
                   </p>
+                  {product.size && (
+                    <p className="text-xs text-blue-600 font-medium mt-1">
+                      ✓ Size Available
+                    </p>
+                  )}
                 </div>
 
                 {/* Card Footer with Buttons */}
