@@ -970,7 +970,7 @@ export const categories: Category[] = [
             title: "Samsung 43″ Crystal 4K UHD Smart TV | Free Gift Available",
             categoryId: CategoryId.TV,
             subCategoryId: SubCategoryId.Samsung,
-            subCategoryName: "Samsung",
+            subCategoryName: "Samsung ",
             price: 94990,
             size: "43″",
             description:
@@ -982,7 +982,7 @@ export const categories: Category[] = [
       {
         id: SubCategoryId.Haier,
         label: "Haier",
-        name: "হাইয়ার (Haier)",
+        name: "হায়ার (Haier)",
         path: "/tv/haier",
         image: haier32,
         products: [
@@ -993,7 +993,7 @@ export const categories: Category[] = [
             title: "Haier 32″ Bezel Less Google TV H32K85FX",
             categoryId: CategoryId.TV,
             subCategoryId: SubCategoryId.Haier,
-            subCategoryName: "হাইয়ার",
+            subCategoryName: "হায়ার টিভি",
             price: 19999,
             size: "32″",
             description:
@@ -1007,7 +1007,7 @@ export const categories: Category[] = [
             title: "Haier H43K85FFX 43″ FHD Google TV",
             categoryId: CategoryId.TV,
             subCategoryId: SubCategoryId.Haier,
-            subCategoryName: "হাইয়ার",
+            subCategoryName: "হায়ার টিভি",
             price: 28999,
             size: "43″",
             description:
@@ -1019,7 +1019,7 @@ export const categories: Category[] = [
       {
         id: SubCategoryId.HaierQLED,
         label: "Haier QLED",
-        name: "হাইয়ার QLED (Haier QLED)",
+        name: "হায়ার QLED (Haier QLED)",
         path: "/tv/haier-qled",
         image: haier43QLED,
         products: [
@@ -1030,7 +1030,7 @@ export const categories: Category[] = [
             title: "Haier H43S80EUX 43″ QLED 4K Android Google TV",
             categoryId: CategoryId.TV,
             subCategoryId: SubCategoryId.HaierQLED,
-            subCategoryName: "হাইয়ার QLED",
+            subCategoryName: "হায়ার টিভি",
             price: 34999,
             size: "43″",
             description:
@@ -1044,7 +1044,7 @@ export const categories: Category[] = [
             title: "Haier H32S80EFX QLED Technology TV",
             categoryId: CategoryId.TV,
             subCategoryId: SubCategoryId.HaierQLED,
-            subCategoryName: "হাইয়ার QLED",
+            subCategoryName: "হায়ার টিভি",
             price: 21999,
             size: "32″",
             description:
@@ -1056,7 +1056,7 @@ export const categories: Category[] = [
       {
         id: SubCategoryId.HaierHcast,
         label: "Haier H-CAST",
-        name: "হাইয়ার H-CAST (Haier H-CAST)",
+        name: "হায়ার H-CAST (Haier H-CAST)",
         path: "/tv/haier-hcast",
         image: haier32Hcast,
         products: [
@@ -1067,7 +1067,7 @@ export const categories: Category[] = [
             title: "Haier H32D2MS 32″ H-CAST SERIES LED TV",
             categoryId: CategoryId.TV,
             subCategoryId: SubCategoryId.HaierHcast,
-            subCategoryName: "হাইয়ার H-CAST",
+            subCategoryName: "হায়ার টিভি",
             price: 14900,
             size: "32″",
             description:
