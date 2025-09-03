@@ -1,0 +1,49 @@
+Haier H43K85FFX 43 Inch FHD Google TV
+
+Hardware
+Storage	8GB Storage
+Primary Information
+Display	DLED, FHD
+Screen Size	43" Full HD
+Refresh rate	60Hz
+Contrast Ratio	4000:1
+Brightness	300 cd/m²
+Viewing angle	Wide 178°
+Response Time	6.5ms
+Power Information
+Power Voltage	100–240V ~ 50/60Hz
+Audio Features
+Audio Output	24W (12W x 2) Stereo Speakers
+Speaker System	Built in
+Connectivity
+Bluetooth	Included
+HDMI	3x HDMI
+Headphone Jack	Yes
+USB	2x USB
+Wi-Fi Access	Yes
+Remote control	Bluetooth
+Input Type
+Processor	ARM Cortex Advanced Quad-Core
+Graphics	ARM Mali Multi-Core
+RAM	1.5GB RAM
+Operating System	Google TV
+Physical Structure
+Dimension	(1920 x 1080)
+Weight	6.2 kg (TV only)
+6.3 kg (with stand)
+8.9 kg (gross)
+Special Features
+Others	Picture Modes: User, Standard, Vivid, Sport, Movie, Game, Energy Saving
+HDR Decoding: Supported
+Built-in Chromecast
+Preloaded Apps: Netflix, YouTube, Amazon Prime Video, Google Play
+Voice Control: Google Assistant Compatible
+App Store: Google Play Store
+Digital Noise Reduction
+Auto Timer On/Off
+Child Lock
+Energy Saving Modes
+Warranty Details
+Warranty Information	Panel: 4 Years
+Parts & Service: 2 Years
+TV Replacement Guarantee: 6 Months (For panel failure)

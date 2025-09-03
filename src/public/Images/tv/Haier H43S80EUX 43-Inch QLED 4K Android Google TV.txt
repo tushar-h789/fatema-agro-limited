@@ -1,0 +1,47 @@
+Haier H43S80EUX 43-Inch QLED 4K Android Google TV
+
+Hardware
+Storage	32GB Flash Storage
+Primary Information
+Display	QLED, DLED, 4K UHD
+Screen Size	43"
+Resolution	3840 x 2160
+Refresh rate	60Hz
+Contrast Ratio	5000:1
+Brightness	280 (cd/m²)
+Viewing angle	160° / 150°
+Response Time	6.5ms
+Aspect Ratio	16:9
+Audio Features
+Audio Output	12W x 2 Speakers
+Speaker System	Built-In
+Input Type
+Processor	ARM Advanced Multi-Core Cortex CA55
+Graphics	Mali G52 MC1 @ 550MHz
+RAM	2GB DDR3
+Operating System	Google TV
+Physical Structure
+Dimension	Without Stand: 957 x 82.2 x 556 mm
+With Stand: 957 x 240.7 x 609.5 mm
+Weight	7.2 KG
+Special Features
+Others	Picture Modes: User, Standard, Vivid, Sport, Movie, Energy Saving
+Noise Reduction: Yes
+Wireless Wi-Fi Access: Yes
+Ethernet LAN: Yes
+Bluetooth Remote: Yes
+Supported Apps: Netflix, YouTube, Google Play, Amazon Prime Video
+Google Assistant: Yes
+Local Multimedia Playback (Movie / Photo / Music): Yes
+HDR Decoding: Yes
+Wide Mode: Yes
+Multi Picture Modes: User, Standard, Vivid, Sport, Movie, Energy Saving
+Multi Audio Modes: User, Standard, Night, Sports, Movie, Music, News
+Multi Energy Modes: Yes
+App Store / Browser: Yes
+Auto Timer On/Off: Yes
+Digital Noise Reduction: Yes
+Warranty Details
+Warranty Information	Panel Warranty: 4 Years
+Parts & Service Warranty: 2 Years
+TV Replacement Guarantee: 6 Months

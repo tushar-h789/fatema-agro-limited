@@ -1,0 +1,76 @@
+32 inch H-CAST SERIES LED TV
+Product Description
+Colour: Black
+Screen Size (Inch): 32″
+Resolution: HD Ready
+Category: H-Cast (Screen Mirroring)
+GENERAL
+Size::   32″
+Panel Type::   DLED
+System of Analog TV（VIDEO/AUDIO)::   PAL/BG
+Connected TV::   YES
+Type::   H-Cast Series
+ 
+
+PANEL
+Aspect Ratio::   16:9
+Resolutions::   1366*768
+Refresh Rate::   60Hz
+Contrast Ratio::   3000:1
+Response Time::   6.5ms
+Viewable Angle (H/V)::   178/178
+ 
+
+Video
+Picture Modes::   Standard/Dynamic/ Mild/ User/ECO
+Digital Comb Filter::   YES
+Noice Reduction::   YES
+ 
+
+AUDIO
+Audio Mode::    Standard/Music/Movie/User
+Dolby Digital Decoding::   YES
+AVL(Auto-Volume leveler)::   YES
+Audio Output Power::   10W X 2 (20 Watt)
+Mute::   YES
+Stereo Speaker::   YES
+ 
+
+INPUT
+HDMI::   3
+USB::   2
+USB PalybacK::   YES
+RF Input::   1
+Composite Input::   1
+15 Pin D-sub(VGA/PC)::   1
+HeadPhone::   1
+PC Audio Input::   1
+Component Input::   1
+ 
+
+FUNCTION
+Hotel Mode::    YES
+Sleep Time::   YES
+Working power consumption(rating label)::   55 W
+Stand-by power consumption(W)::   0.5 W
+Voltage Range::   100V~240V
+3D Comb Filter::   YES
+USB Version::   2
+Multi-Picture Modes::   Standard/Dynamic/ Mild/ User/ECO
+Color temperature::   Cool, Normal, Warm
+HDMI CEC::   YES
+ 
+
+STRUCTURE
+Unit Weight (Kg) Just TV::   3.7KG
+Weight (Just Stand)::   75G
+Gross Weight::   4.9KG
+Dimensions (BxHxT) just TV::   752.9*430.8*83.4
+Dimensions (BxHxT)TV with stand::   752.9*477.2*216.1
+Gross dimensions (carton)::   800*128*520
+ 
+
+WARRANTY
+Panel Warranty:   4 Years
+Parts & Service Warranty:   2 Years
+TV Replacement Guarantee::   6 Months (In case of panel failure)
