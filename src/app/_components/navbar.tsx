@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from "react";
 import { usePathname, useRouter } from "next/navigation"; // Add useRouter to handle navigation
-import { categories } from "../../../shared/data";
+import { categories, CategoryId } from "../../../shared/data";
 import Link from "next/link";
 import CartIcon from "../../../shared/icons/cart-icon";
 import { Menu, X } from "lucide-react"; // Add this import
@@ -122,54 +122,91 @@ const Navbar = () => {
                       ? "bg-primary text-white"
                       : "hover:bg-slate-100"
                   }`}
-                  onMouseEnter={() => setHoveredCategory(category.name)}
+                  onMouseEnter={() =>
+                    setHoveredCategory(
+                      category.id === CategoryId.TV ? "Electronics" : category.name
+                    )
+                  }
                   onMouseLeave={() => setHoveredCategory(null)}
                 >
-                  <Link
-                    href={category.path}
-                    className={`${
-                      currentPath === category.path
-                        ? "font-bold text-white"
-                        : "text-gray-700"
-                    }`}
-                  >
-                    {category.name}
-                  </Link>
-                  <span
-                    className={
-                      currentPath === category.path
-                        ? "text-white"
-                        : "text-gray-500"
-                    }
-                  >
-                    ({categoryProductCounts[category.name] || 0})
-                  </span>
+                  {/* Replace TV with Electronics at first level */}
+                  {category.id === CategoryId.TV ? (
+                    <>
+                      <div className={`${currentPath?.startsWith("/tv") ? "font-bold text-primary" : "text-gray-700"}`}>
+                        ইলেকট্রনিক্স (Electronics)
+                      </div>
+                      <span className={currentPath?.startsWith("/tv") ? "text-primary" : "text-gray-500"}>
+                        ({categoryProductCounts[category.name] || 0})
+                      </span>
 
-                  {/* Subcategories dropdown */}
-                  {hoveredCategory === category.name && (
-                    <ul className="absolute top-0 left-full w-72 menu p-2 bg-white border border-gray-200 shadow-lg rounded-lg">
-                      {category.subCategories.map((subCategory) => (
-                        <li
-                          key={subCategory.id}
-                          className={`py-2 px-4 border-b relative ${
-                            currentPath === subCategory.path
-                              ? "bg-primary text-white"
-                              : "hover:bg-slate-50"
-                          }`}
-                        >
-                          <Link
-                            href={subCategory.path}
-                            className={`${
-                              currentPath === subCategory.path
-                                ? "font-bold text-white"
-                                : "text-gray-700"
+                      {hoveredCategory === "Electronics" && (
+                        <ul className="absolute top-0 left-full w-72 menu p-2 bg-white border border-gray-200 shadow-lg rounded-lg">
+                          <li
+                            className={`py-2 px-4 border-b relative ${
+                              currentPath?.startsWith("/tv")
+                                ? "bg-primary text-white"
+                                : "hover:bg-slate-50"
                             }`}
                           >
-                            {subCategory.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                            <Link
+                              href="/tv"
+                              className={`${currentPath?.startsWith("/tv") ? "font-bold text-white" : "text-gray-700"}`}
+                            >
+                              টিভি (TV)
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <Link
+                        href={category.path}
+                        className={`${
+                          currentPath === category.path
+                            ? "font-bold text-white"
+                            : "text-gray-700"
+                        }`}
+                      >
+                        {category.name}
+                      </Link>
+                      <span
+                        className={
+                          currentPath === category.path
+                            ? "text-white"
+                            : "text-gray-500"
+                        }
+                      >
+                        ({categoryProductCounts[category.name] || 0})
+                      </span>
+
+                      {/* Subcategories dropdown (unchanged for non-TV categories) */}
+                      {hoveredCategory === category.name && (
+                        <ul className="absolute top-0 left-full w-72 menu p-2 bg-white border border-gray-200 shadow-lg rounded-lg">
+                          {category.subCategories.map((subCategory) => (
+                            <li
+                              key={subCategory.id}
+                              className={`py-2 px-4 border-b relative ${
+                                currentPath === subCategory.path
+                                  ? "bg-primary text-white"
+                                  : "hover:bg-slate-50"
+                              }`}
+                            >
+                              <Link
+                                href={subCategory.path}
+                                className={`${
+                                  currentPath === subCategory.path
+                                    ? "font-bold text-white"
+                                    : "text-gray-700"
+                                }`}
+                              >
+                                {subCategory.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
                   )}
                 </li>
               ))}
