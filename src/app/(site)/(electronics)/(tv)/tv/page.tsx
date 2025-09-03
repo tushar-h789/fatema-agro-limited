@@ -2,7 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CategoryId, getProductsByCategory, Product } from "../../../../../../shared/data";
+import {
+  CategoryId,
+  getProductsByCategory,
+  Product,
+} from "../../../../../../shared/data";
 
 export default function TVListingPage() {
   const products = getProductsByCategory(CategoryId.TV);
@@ -34,9 +38,11 @@ export default function TVListingPage() {
               <h3 className="font-medium group-hover:text-primary transition">
                 {p.title}
               </h3>
-              <p className="text-sm text-muted-foreground">{p.quantity}</p>
+              <p className="text-sm text-muted-foreground">
+                Size: {p.quantity}
+              </p>
               <div className="mt-2 font-semibold">
-                ৳ {p.price.toLocaleString("bn-BD")}
+                Price: ৳ {p.price.toLocaleString("bn-BD")}
               </div>
             </div>
           </Link>

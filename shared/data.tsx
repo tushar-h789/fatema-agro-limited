@@ -101,7 +101,8 @@ export interface Product {
   subCategoryId: SubCategoryId;
   subCategoryName: string;
   price: number;
-  quantity: string;
+  quantity?: string;
+  size?: string;
   description: string;
   image: string | StaticImageData;
 }
@@ -913,7 +914,7 @@ export const categories: Category[] = [
     id: CategoryId.TV,
     label: "TV",
     name: "টিভি (TV)",
-    path: "/tv/samsung",
+    path: "/tv",
     subCategories: [
       {
         id: SubCategoryId.Samsung,
@@ -931,7 +932,8 @@ export const categories: Category[] = [
             subCategoryId: SubCategoryId.Samsung,
             subCategoryName: "Samsung",
             price: 29990,
-            quantity: "32″",
+            // quantity: "32″",
+            size: "32″",
             description:
               "Samsung UA32T4400AR একটি 32-ইঞ্চি স্মার্ট HD টিভি যা Tizen™ অপারেটিং সিস্টেমে চলে। Quad Core প্রসেসর দ্বারা চালিত এই টিভিতে রয়েছে PurColor প্রযুক্তি, HDR সাপোর্ট এবং পরিষ্কার অডিওর জন্য Dolby Digital Plus। 2×HDMI, 1×USB, বিল্ট-ইন Wi‑Fi এবং Smart View সহ সহজ কানেক্টিভিটি। স্টাইলিশ বেজেল-লেস ডিজাইন, হালকা ওজন (প্রায় 4.1 কেজি) এবং স্যামসাং-এর নির্ভরযোগ্য সাপোর্টের সাথে এটি আপনার লিভিং রুমে একটি প্রিমিয়াম অভিজ্ঞতা নিশ্চিত করে। ওয়ারেন্টি: LED প্যানেল ২ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ৫ বছর।",
             image: samsung32,
