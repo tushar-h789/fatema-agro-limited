@@ -1,11 +1,17 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { getAllProducts } from '../../../../shared/data'; // Importing the function to get all products
-import { Card, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import React from "react";
+import { getAllProducts } from "../../../../shared/data"; // Importing the function to get all products
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import bgImg from "../../../public/title-bg.jpg";
 
 export default function PopularProducts() {
@@ -13,12 +19,11 @@ export default function PopularProducts() {
 
   // Get all products from categories
   const products = getAllProducts();
-  // console.log(products);
-  
+  console.log(products);
 
   // Helper function to truncate description to 8 words
   const truncateDescription = (description: string) => {
-    return description.split(' ').slice(0, 8).join(' ') + '...';
+    return description.split(" ").slice(0, 8).join(" ") + "...";
   };
 
   const handleCardClick = (id: string, path: string) => {
@@ -34,10 +39,9 @@ export default function PopularProducts() {
           style={{ backgroundImage: `url(${bgImg.src})` }}
         >
           <h2 className="text-center mb-8 text-2xl font-bold text-slate-100 border-b-2 py-10 bg-gradient-to-r from-green-700  bg-opacity-40">
-          পপুলার পণ্য
+            পপুলার পণ্য
           </h2>
         </div>
-
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -75,10 +79,15 @@ export default function PopularProducts() {
                 {/* Price and Quantity */}
                 <div className="px-4 py-2 bg-white">
                   <p className="text-sm font-medium text-gray-800">
-                    Price: <span className="text-green-600">{product.price}৳</span>
+                    Price:{" "}
+                    <span className="text-green-600">{product.price}৳</span>
                   </p>
                   <p className="text-xs text-gray-500">
-                    Quantity: {product.quantity}
+                    {product.size
+                      ? `Size: ${product.size}`
+                      : product.quantity
+                      ? `Quantity: ${product.quantity}`
+                      : ""}
                   </p>
                 </div>
 

@@ -12,6 +12,12 @@ import murgi from "../src/public/Images/mangso/chiken/deshi-murgi.jpeg";
 import koyelPakhi from "../src/public/Images/mangso/chiken/koel-pakhi.jpg";
 import PeraSondeshImg from "../src/public/Images/desert/pera-sondesh/pera-sondesh.jpg";
 import samsung32 from "../src/public/Images/tv/Samsung 32″ Smart HD TV  UA32T4400AR.jpg";
+import samsung43 from "../src/public/Images/tv/Samsung 43″ 4K Smart UHD TV.jpg";
+import samsung43Crystal from "../src/public/Images/tv/free gift - Samsung 43″ Crystal 4K UHD Smart TV.jpg";
+import haier32 from "../src/public/Images/tv/Haier 32 Bezel Less Google TV.webp";
+import haier43FHD from "../src/public/Images/tv/Haier H43K85FFX 43 Inch FHD Google TV.webp";
+import haier43QLED from "../src/public/Images/tv/Haier H43S80EUX 43-Inch QLED 4K Android Google TV.webp";
+import haier32Hcast from "../src/public/Images/tv/32 inch H-CAST SERIES LED TV.webp";
 
 import { StaticImageData } from "next/image";
 
@@ -89,6 +95,11 @@ export enum SubCategoryId {
   PeraSondesh = "8.1",
   // TV subcategories
   Samsung = "9.1",
+  Samsung43 = "9.2",
+  Samsung43Crystal = "9.3",
+  Haier = "9.4",
+  HaierQLED = "9.5",
+  HaierHcast = "9.6",
 }
 
 // Product interface
@@ -101,7 +112,8 @@ export interface Product {
   subCategoryId: SubCategoryId;
   subCategoryName: string;
   price: number;
-  quantity: string;
+  quantity?: string;
+  size?: string;
   description: string;
   image: string | StaticImageData;
 }
@@ -913,7 +925,7 @@ export const categories: Category[] = [
     id: CategoryId.TV,
     label: "TV",
     name: "টিভি (TV)",
-    path: "/tv/samsung",
+    path: "/tv",
     subCategories: [
       {
         id: SubCategoryId.Samsung,
@@ -931,10 +943,136 @@ export const categories: Category[] = [
             subCategoryId: SubCategoryId.Samsung,
             subCategoryName: "Samsung",
             price: 29990,
-            quantity: "32″",
+            // quantity: "32″",
+            size: "32″",
             description:
               "Samsung UA32T4400AR একটি 32-ইঞ্চি স্মার্ট HD টিভি যা Tizen™ অপারেটিং সিস্টেমে চলে। Quad Core প্রসেসর দ্বারা চালিত এই টিভিতে রয়েছে PurColor প্রযুক্তি, HDR সাপোর্ট এবং পরিষ্কার অডিওর জন্য Dolby Digital Plus। 2×HDMI, 1×USB, বিল্ট-ইন Wi‑Fi এবং Smart View সহ সহজ কানেক্টিভিটি। স্টাইলিশ বেজেল-লেস ডিজাইন, হালকা ওজন (প্রায় 4.1 কেজি) এবং স্যামসাং-এর নির্ভরযোগ্য সাপোর্টের সাথে এটি আপনার লিভিং রুমে একটি প্রিমিয়াম অভিজ্ঞতা নিশ্চিত করে। ওয়ারেন্টি: LED প্যানেল ২ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ৫ বছর।",
             image: samsung32,
+          },
+          {
+            id: "902",
+            path: "/tv/samsung",
+            label: "Samsung 43″ 4K Smart UHD TV",
+            title: "Samsung 43″ 4K Smart UHD TV",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Samsung,
+            subCategoryName: "Samsung",
+            price: 89990,
+            size: "43″",
+            description:
+              "Samsung 43″ 4K Smart UHD TV একটি প্রিমিয়াম 4K রেজোলিউশন টিভি যা Crystal Processor 4K প্রযুক্তি ব্যবহার করে। এই টিভিতে রয়েছে HDR 10 সাপোর্ট, Auto Motion Plus, Dolby Digital Plus অডিও, এবং 20W সাউন্ড আউটপুট। Tizen™ অপারেটিং সিস্টেমে চালিত এই টিভিতে রয়েছে WiFi, Bluetooth Audio, 3×HDMI, 2×USB পোর্ট এবং AirSlim ডিজাইন। 4K রেজোলিউশন (3,840 x 2,160) এবং 2200 PQI (Picture Quality Index) সহ এই টিভি আপনার বাড়িতে সিনেমা হলের অভিজ্ঞতা নিশ্চিত করে। ওয়ারেন্টি: LED প্যানেল ২ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ৫ বছর।",
+            image: samsung43,
+          },
+          {
+            id: "903",
+            path: "/tv/samsung",
+            label: "Samsung 43″ Crystal 4K UHD Smart TV",
+            title: "Samsung 43″ Crystal 4K UHD Smart TV | Free Gift Available",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Samsung,
+            subCategoryName: "Samsung",
+            price: 94990,
+            size: "43″",
+            description:
+              "Samsung 43″ Crystal 4K UHD Smart TV একটি বিশেষ সংস্করণ যা ফ্রি গিফট সহ আসে। এই টিভিতে রয়েছে Crystal Processor 4K, HDR 10 সাপোর্ট, এবং Dolby Digital Plus অডিও। 4K রেজোলিউশন (3,840 x 2,160) সহ এই টিভি Crystal Display প্রযুক্তি ব্যবহার করে যা ছবিকে আরও উজ্জ্বল এবং স্পষ্ট করে তোলে। Tizen™ অপারেটিং সিস্টেম, WiFi, Bluetooth Audio, 3×HDMI, 2×USB পোর্ট এবং AirSlim ডিজাইন সহ এই টিভি আপনার বাড়িতে প্রিমিয়াম অভিজ্ঞতা নিশ্চিত করে। বিশেষ অফার: ফ্রি গিফট সহ। ওয়ারেন্টি: LED প্যানেল ২ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ৫ বছর।",
+            image: samsung43Crystal,
+          },
+        ],
+      },
+      {
+        id: SubCategoryId.Haier,
+        label: "Haier",
+        name: "হাইয়ার (Haier)",
+        path: "/tv/haier",
+        image: haier32,
+        products: [
+          {
+            id: "904",
+            path: "/tv/haier",
+            label: "Haier 32″ Bezel Less Google TV",
+            title: "Haier 32″ Bezel Less Google TV H32K85FX",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Haier,
+            subCategoryName: "হাইয়ার",
+            price: 19999,
+            size: "32″",
+            description:
+              "Haier 32″ Bezel Less Google TV H32K85FX একটি আধুনিক স্মার্ট টিভি যা Google TV অপারেটিং সিস্টেমে চলে। এই টিভিতে রয়েছে LED ডিসপ্লে, 1366 × 768 রেজোলিউশন, এবং 60Hz রিফ্রেশ রেট। ARM A55*4@1.5GHz প্রসেসর এবং 1.5GB DDR3 RAM সহ এই টিভি দ্রুত পারফরম্যান্স নিশ্চিত করে। 3×HDMI 2.0, USB, WiFi, এবং Bluetooth কানেক্টিভিটি সহ এই টিভি আপনার বাড়িতে স্মার্ট অভিজ্ঞতা নিশ্চিত করে। Bezel-less ডিজাইন এবং 4KG ওজন সহ এটি আপনার লিভিং রুমে একটি স্টাইলিশ সংযোজন। ওয়ারেন্টি: প্যানেল ৪ বছর, স্পেয়ার পার্টস ২ বছর, সার্ভিস ৫ বছর।",
+            image: haier32,
+          },
+          {
+            id: "905",
+            path: "/tv/haier",
+            label: "Haier 43″ FHD Google TV",
+            title: "Haier H43K85FFX 43″ FHD Google TV",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Haier,
+            subCategoryName: "হাইয়ার",
+            price: 28999,
+            size: "43″",
+            description:
+              "Haier H43K85FFX 43″ FHD Google TV একটি প্রিমিয়াম Full HD টিভি যা Google TV অপারেটিং সিস্টেমে চলে। এই টিভিতে রয়েছে DLED ডিসপ্লে, 1920 x 1080 রেজোলিউশন, এবং 60Hz রিফ্রেশ রেট। ARM Cortex Advanced Quad-Core প্রসেসর এবং 1.5GB RAM সহ এই টিভি দ্রুত পারফরম্যান্স নিশ্চিত করে। 3×HDMI, 2×USB, WiFi, Bluetooth, এবং 24W স্টেরিও স্পিকার সহ এই টিভি আপনার বাড়িতে সিনেমা হলের অভিজ্ঞতা নিশ্চিত করে। HDR ডিকোডিং, বিল্ট-ইন Chromecast, এবং Google Assistant সাপোর্ট সহ এটি একটি সম্পূর্ণ স্মার্ট টিভি। ওয়ারেন্টি: প্যানেল ৪ বছর, স্পেয়ার পার্টস ও সার্ভিস ২ বছর।",
+            image: haier43FHD,
+          },
+        ],
+      },
+      {
+        id: SubCategoryId.HaierQLED,
+        label: "Haier QLED",
+        name: "হাইয়ার QLED (Haier QLED)",
+        path: "/tv/haier-qled",
+        image: haier43QLED,
+        products: [
+          {
+            id: "906",
+            path: "/tv/haier-qled",
+            label: "Haier 43″ QLED 4K Android Google TV",
+            title: "Haier H43S80EUX 43″ QLED 4K Android Google TV",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.HaierQLED,
+            subCategoryName: "হাইয়ার QLED",
+            price: 34999,
+            size: "43″",
+            description:
+              "Haier H43S80EUX 43″ QLED 4K Android Google TV একটি প্রিমিয়াম QLED টিভি যা Android এবং Google TV অপারেটিং সিস্টেমে চলে। এই টিভিতে রয়েছে QLED ডিসপ্লে, 4K রেজোলিউশন, এবং উন্নত কালার টেকনোলজি। QLED প্রযুক্তি ব্যবহার করে এই টিভি উজ্জ্বল, স্পষ্ট, এবং জীবন্ত রং প্রদর্শন করে। Android এবং Google TV এর সমন্বয়ে এই টিভিতে রয়েছে Google Play Store, Netflix, YouTube, এবং Amazon Prime Video সহ অসংখ্য অ্যাপ। 4K রেজোলিউশন এবং QLED ডিসপ্লে সহ এই টিভি আপনার বাড়িতে প্রিমিয়াম সিনেমা অভিজ্ঞতা নিশ্চিত করে। ওয়ারেন্টি: প্যানেল ৪ বছর, স্পেয়ার পার্টস ও সার্ভিস ২ বছর।",
+            image: haier43QLED,
+          },
+          {
+            id: "908",
+            path: "/tv/haier-qled",
+            label: "Haier H32S80EFX QLED Technology TV",
+            title: "Haier H32S80EFX QLED Technology TV",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.HaierQLED,
+            subCategoryName: "হাইয়ার QLED",
+            price: 21999,
+            size: "32″",
+            description:
+              "Haier H32S80EFX QLED Technology TV একটি উচ্চ-প্রযুক্তির QLED টিভি যা QLED (Quantum Light Emitting Diode) প্রযুক্তি ব্যবহার করে। এই টিভিতে রয়েছে 4K Ultra HD রেজোলিউশন, HDR সাপোর্ট, এবং উন্নত কালার ম্যানেজমেন্ট সিস্টেম। QLED প্রযুক্তি ব্যবহার করে এই টিভি উজ্জ্বল, স্পষ্ট, এবং জীবন্ত রং প্রদর্শন করে যা সাধারণ LED টিভির তুলনায় অনেক উন্নত। এই টিভিতে রয়েছে Android অপারেটিং সিস্টেম, Google Play Store, WiFi, Bluetooth, এবং 4×HDMI পোর্ট। QLED ডিসপ্লে সহ এই টিভি আপনার বাড়িতে সিনেমা হলের অভিজ্ঞতা নিশ্চিত করে। ওয়ারেন্টি: প্যানেল ৪ বছর, স্পেয়ার পার্টস ও সার্ভিস ২ বছর।",
+            image: haier43QLED,
+          },
+        ],
+      },
+      {
+        id: SubCategoryId.HaierHcast,
+        label: "Haier H-CAST",
+        name: "হাইয়ার H-CAST (Haier H-CAST)",
+        path: "/tv/haier-hcast",
+        image: haier32Hcast,
+        products: [
+          {
+            id: "907",
+            path: "/tv/haier-hcast",
+            label: "Haier H32D2MS 32″ H-CAST SERIES LED TV",
+            title: "Haier H32D2MS 32″ H-CAST SERIES LED TV",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.HaierHcast,
+            subCategoryName: "হাইয়ার H-CAST",
+            price: 14900,
+            size: "32″",
+            description:
+              "Haier H32D2MS 32″ H-CAST SERIES LED TV একটি আধুনিক LED টিভি যা H-CAST প্রযুক্তি ব্যবহার করে। এই টিভিতে রয়েছে LED ডিসপ্লে, HD রেজোলিউশন, এবং উন্নত ইমেজ প্রসেসিং। H-CAST প্রযুক্তি ব্যবহার করে এই টিভি দ্রুত এবং সহজ কানেক্টিভিটি নিশ্চিত করে। এই টিভিতে রয়েছে HDMI, USB, এবং অন্যান্য কানেক্টিভিটি অপশন। হালকা ওজন এবং স্টাইলিশ ডিজাইন সহ এটি আপনার বাড়িতে একটি সুন্দর সংযোজন। এই টিভি আপনার দৈনন্দিন টিভি দেখার অভিজ্ঞতাকে আরও উন্নত করে তোলে। ওয়ারেন্টি: প্যানেল ৪ বছর, স্পেয়ার পার্টস ও সার্ভিস ২ বছর।",
+            image: haier32Hcast,
           },
         ],
       },

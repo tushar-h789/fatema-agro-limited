@@ -1,0 +1,19 @@
+Haier 32" Bezel Less Google TV H32K85FX
+Storage	8 GB Flash
+Primary Information
+Display	LED
+Screen Size	32-inch
+Resolution	1366 × 768
+Refresh rate	60 Hz
+Aspect Ratio	16:9
+Connectivity
+HDMI	3x HDMI 2.0
+Input Type
+Processor	ARM A55*4@1.5GHz
+Graphics	ARM Advanced Multi-Core Mali G31
+RAM	1.5 GB DDR3
+Operating System	Google TV
+Physical Structure
+Weight	4KG
+Warranty Details
+Warranty Information	4 Years Panel, 2 Years Parts, 5 Years Service Warranty

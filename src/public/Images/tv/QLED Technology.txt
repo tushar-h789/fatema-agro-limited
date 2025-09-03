@@ -1,0 +1,80 @@
+
+QLED Technology
+RAM: 1.5GB
+ROM: 8GB Flash
+Operating System: Google TV...
+
+
+Display
+Color Depth	16.7 Million
+Resolution	1920 x 1080 (Full HD)
+Screen Size	32-Inch
+Viewing Angle (H/V)	160° / 150°
+Hardware
+RAM	1.5 GB DDR3
+Panel
+Aspect Ratio	16:9
+Brightness	250 cd/m²
+Contrast Ratio	60Hz
+Contrast Ratio	4000:1
+Response Time	6.5ms
+Processor & Graphics
+CPU	ARM Cortex Advanced Quad-Core
+GPU	ARM Advanced Multi-Core Mali
+Video
+Noise Reduction	Yes
+Picture Modes	User, Standard, Vivid, Sport, Movie, Energy Saving
+Basic Information
+Brand	Haier
+Model	H32S80EFX
+General
+Analog TV System (Video/Audio)	PAL/SECAM
+Digital TV System (Video/Audio)	DVB-S/S2, ATV/DVB-T/C/T2
+Display Type	QLED
+Smart TV OS	Google TV
+Physical Specification
+Weight	3.8 kg
+Power Information
+Power Supply	100–240V ~ 50/60Hz
+Additional Features
+Amazon Prime Video	Yes
+App Store / Web Browser	Yes
+Bluetooth Remote Control	Yes
+Chromecast Built-In	Yes
+Colour Temperature Settings	User, Standard, Warm, Cool
+Digital Noise Reduction	Yes
+Energy Modes	Yes
+Google Assistant	Yes
+Google Play Store	Yes
+HDMI Version	1.4
+HDR Decoding	Yes
+Local Media Playback (Movie/Photo/Music)	Yes
+Multiple Audio Modes	Yes
+Multiple Picture Modes	Yes
+Netflix	Yes
+Operating System	Google TV
+ROM	8 GB Flash
+Wide Mode	Yes
+YouTube	Yes
+Dimensions	(715.7 W x 83.8 H x 430.1 mm D)
+Connectivity
+Composite Input	1
+Ethernet (LAN)	Yes
+HDMI	3 (HDMI 1.4)
+Headphone Jack	1
+USB	2 (USB 2.0)
+Wi-Fi Access	Yes
+Audio
+Audio Modes	User, Standard, Night, Sports, Movie, Music, News
+Auto Volume Levelling	Yes
+Dolby Digital Decoding	Yes
+Mute Function	Yes
+Sound Balance	Yes
+Speaker Output	10W x 2
+Stereo Speaker	Yes
+Surround Sound	Yes
+Warranty Information
+Warranty	
+Panel: 4 Years
+Parts and Service: 2 Years
+TV Replacement Guarantee: 6 Months (In case of panel failure)
