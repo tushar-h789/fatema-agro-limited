@@ -132,10 +132,10 @@ const Navbar = () => {
                   {/* Replace TV with Electronics at first level */}
                   {category.id === CategoryId.TV ? (
                     <>
-                      <div className={`${currentPath?.startsWith("/tv") ? "font-bold text-primary" : "text-gray-700"}`}>
-                        ইলেকট্রনিক্স (Electronics)
+                      <div className={`${currentPath?.startsWith("/tv") ? "font-bold text-white text-primary" : "text-gray-700"}`}>
+                        ইলেকট্রনিক্স (Electronics) 
                       </div>
-                      <span className={currentPath?.startsWith("/tv") ? "text-primary" : "text-gray-500"}>
+                      <span className={currentPath?.startsWith("/tv") ? "text-white" : "text-gray-500"}>
                         ({categoryProductCounts[category.name] || 0})
                       </span>
 
