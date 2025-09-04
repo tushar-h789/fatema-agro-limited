@@ -1224,7 +1224,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.AC,
             subCategoryId: SubCategoryId.HaierAC,
             subCategoryName: "Gree AC",
-            price: 42999,
+            price: 55999,
             size: "1.5 Ton",
             description:
               "Gree AC 1.5 Ton GS-18XCM32 New Model 2024: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ, পাওয়ার ইনপুট ১৫৯৫ওয়াট, ইইআর ৩.৩০, এয়ার সার্কুলেশন ৯০০ ম³/ঘণ্টা। কোল্ড প্লাজমা জেনারেটর, গোল্ডেন ফিন কনডেন্সার, আই ফিল প্রযুক্তি, কমফোর্টেবল স্লিপিং মোড, অটো ক্লিন ফাংশন। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ১ বছর।",
@@ -1238,7 +1238,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.AC,
             subCategoryId: SubCategoryId.HaierAC,
             subCategoryName: "Gree AC",
-            price: 38999,
+            price: 46999,
             size: "1.5 Ton",
             description:
               "Gree AC 1.5 Ton GS-18LM410 Non Inverter: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ, পাওয়ার ইনপুট ১৮৩২ওয়াট, ইইআর ২.৮৮, এয়ার সার্কুলেশন ৮১০-১০০০ ম³/ঘণ্টা। কোল্ড প্লাজমা জেনারেটর, গোল্ডেন ফিন কনডেন্সার, আই ফিল প্রযুক্তি, কমফোর্টেবল স্লিপিং মোড, অটো ক্লিন ফাংশন। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ১ বছর।",
