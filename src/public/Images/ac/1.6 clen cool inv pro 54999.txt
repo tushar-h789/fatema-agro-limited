@@ -1,0 +1,26 @@
+CleanCool Inverter Pro HSU-19CleanCool(INV)(Pro)
+
+Key Features
+Self-Clean Rate 99.9%
+Saving Up To 65% Energy Saving
+Surge Protection 550V
+30s Instant Chill and 15m Long Distance Flow
+60°C Cooling
+Low Voltage 140V
+Specifications
+Type: Inverter
+Display: Hidden LED Display
+Capacity (BTU): 19000
+Power input(W): 1680
+EER: 3.06
+Running current(A): 7.6
+Power supply (Ph, V, Hz): 1/220/50HZ
+Air circulation (m3/h): 800
+Refrigerant Type: R32
+Indoor Unit Sound power level [dB(A)] (Hi/Mid/Low): 43/40/37
+Outdoor Unit Sound power level [dB(A)]: 55
+Physical Specifications
+Indoor Package Dimension Mm (W/D/H): 910*215*305
+Outdoor Package Dimension Mm (W/D/H): 939*394*590
+Indoor Gross weight (kg): 14
+Outdoor Gross weight (kg): 32.9

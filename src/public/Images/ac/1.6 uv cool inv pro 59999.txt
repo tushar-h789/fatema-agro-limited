@@ -1,0 +1,48 @@
+Haier 1.6 Ton UVCool Inverter Pro DC Inverter Air Conditioner [HSU-19UVCool(INV)(Pro)]
+General
+SKU	HSU19UVCIPHRB
+Brand	Haier
+Warranty Information	(Official) 12 Years Compressor, 4 Years Spare Parts & 2 Years Free Service Warranty
+Cooling Specifications
+Capacity	1.6 Ton
+Cooling Capacity	19000 BTU
+Cooling Modes	Eco Mode, Turbo Function, variable cooling via Inverter Plus Technology
+Airflow Volume	1100 m³/h
+Airflow Direction Control	Auto Up & Down, Auto Left & Right
+Dehumidification	Yes (Smart Dry, Dry Mode)
+I Feel Technology	Yes
+Energy Efficiency
+Energy Star Rating	EER: 2.93, SEER: 3.80
+Power Consumption	Rated Power Input (Cooling): 1800W, Max Power Input (Cooling): 1860W
+Voltage/Frequency	1 Phase, 230V, 50Hz.
+Current (Amps)	Rated Running Current (Cooling): 8.0 A, Max Running Current (Cooling): 9.0 A
+Power Input	Rated: 1800W, Max: 1860W
+Power Saving Features	Inverter Plus Technology (up to 65% savings), ECO Mode, Sleep Mode, I-Feel Technology, Smart Dry Mode
+Compressor and Refrigerant
+Refrigerant Charge	0.980 Kg
+Compressor Type	Rotary
+Condenser Coil Material	100% 7mm Grooved Copper with Golden Fin
+Anti-Corrosion Protection	Golden Fin on heat exchangers suggests anti-corrosion properties. Hyper PCB also implies enhanced durability
+Refrigerant Type	R32
+
+Air Quality Features
+Self-Cleaning Technology	Yes (Frost Self-Clean)
+Humidity Control	Yes (via Smart Dry and Dry Mode)
+Build and Design
+Mounting Type	Wall-Mounted Split System
+Remote Control	Yes
+Indoor Unit Dimensions	975 mm (W) x 220 mm (D) x 318 mm (H) (Net)
+Outdoor Unit Weight	32.5 kg (Net)
+Indoor Unit Weight	12.5 kg (Net)
+Outdoor Unit Dimensions	800 mm (W) x 280 mm (D) x 553 mm (H) (Net)
+Smart and Convenience Features
+Voice Control	Yes
+Quiet Operation Mode	Yes (Low Noise Operation)
+Noise Levels (Outdoor)	55 dB(A) (Sound power level)
+Noise Levels (Indoor)	Hi: 47 dB(A), Mid: 43 dB(A), Lo: 40 dB(A) (Sound power level)
+Child Lock	Yes
+Timer	Yes
+Sleep Mode	Yes
+Auto-Restart Function	Yes
+Mobile App Control	Yes (via Wi-Fi Control)
+Wi-Fi Enabled	Yes

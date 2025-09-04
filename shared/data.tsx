@@ -20,6 +20,8 @@ import haier43QLED from "../src/public/Images/tv/Haier H43S80EUX 43-Inch QLED 4K
 import haier32Hcast from "../src/public/Images/tv/32 inch H-CAST SERIES LED TV.webp";
 import siko32D7 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32D7.jpg";
 import siko32Q06 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32Q06.jpg";
+import acInverter from "../src/public/Images/ac/1.5 ton, Inverter. 49999.jpg";
+import acNonInverter from "../src/public/Images/ac/1.5 Ton, Non Inverter,44499.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -34,6 +36,7 @@ export enum CategoryId {
   Ghee = "7",
   Desart = "8",
   TV = "9",
+  AC = "10",
 }
 
 // Enum for sub-category IDs
@@ -103,6 +106,8 @@ export enum SubCategoryId {
   HaierQLED = "9.5",
   HaierHcast = "9.6",
   Siko = "9.7",
+  // AC subcategories
+  HaierAC = "10.1",
 }
 
 // Product interface
@@ -1113,6 +1118,54 @@ export const categories: Category[] = [
             description:
               "SIKO 32Q06 একটি 32-ইঞ্চি ফুল HD (1920×1080) স্মার্ট LED টিভি। Android 11, 2GB RAM/16GB ROM, 4‑Core CPU (2x Cortex‑A55), DLED backlight, 3000:1 কনট্রাস্ট, 20ms রেসপন্স টাইম। কানেক্টিভিটি: HDMI 1.3/1.4, USB 2.0, AV, RF, LAN, Wi‑Fi। YouTube/Netflix সাপোর্ট। অডিও: 1×10W স্টেরিও, ব্যাক সাইড ডুয়াল স্পিকার। ফাইল সাপোর্ট: Audio MP3/WMA/AC3; Video MPEG/AVI/MOV/MKV/DAT/MP4/VOB; Image JPG/JPEG/PNG/BMP। পাওয়ার: AC 110‑240V, Max 75W, Standby <0.5W। ওয়ারেন্টি: প্যানেল/প্যানেল রিপ্লেসমেন্ট 1 বছর, Best free service 5 বছর।",
             image: siko32Q06,
+          },
+        ],
+      },
+    ],
+  },
+  // AC
+  {
+    id: CategoryId.AC,
+    label: "AC",
+    name: "এসি (AC)",
+    path: "/ac",
+    subCategories: [
+      {
+        id: SubCategoryId.HaierAC,
+        label: "Haier AC",
+        name: "হায়ার এসি (Haier AC)",
+        path: "/ac/haier",
+        image: acInverter,
+        products: [
+          {
+            id: "1001",
+            path: "/ac/haier",
+            label: "Haier 1.5 Ton Inverter AC",
+            title:
+              "Haier CleanCool Inverter 1.5 Ton AC | HSU-18CleanCool (INV)(3DF)(QA)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 49999,
+            size: "1.5 Ton",
+            description:
+              "CleanCool Inverter 1.5 Ton: Android Hidden LED Display, Up to 65% Energy Saving, Self Clean 99.9%, Surge Protection 550V. Capacity 18000 BTU, Power input 1790W, EER 2.93, Running current 8.2A, Power 1/230/50Hz, Air circulation 800 m³/h. Refrigerant R32. Indoor pkg 941×298×381mm (13.5kg), Outdoor pkg 954×409×625mm (33.5kg). ID Noise 46/42/38 dB(A), OD Noise 55 dB(A). Warranty: Compressor 10y, Parts 1y.",
+            image: acInverter,
+          },
+          {
+            id: "1002",
+            path: "/ac/haier",
+            label: "Haier 1.5 Ton Non‑Inverter AC",
+            title:
+              "Haier AquaCool 1.5 Ton Non‑Inverter AC | HSU-18TurboAqua (FIX)(Pro)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 44499,
+            size: "1.5 Ton",
+            description:
+              "AquaCool Non‑Inverter 1.5 Ton: Cooling 18000 BTU, Input 1800W (max 2100W), EER 2.93, Current 8.5A (max 11.5A), Power 1/230V/50Hz, Air Circulation 1000 m³/h. Refrigerant R32 (1.13kg). Indoor 975×220×318mm (12.5kg), Outdoor 800×280×553mm (37kg). Noise: ID 47/43/40 dB(A), OD 55 dB(A). Warranty: Compressor 5y, Spare Parts 2y, Service 2y.",
+            image: acNonInverter,
           },
         ],
       },

@@ -18,16 +18,23 @@ const Navbar = () => {
   const currentPath = usePathname(); // Get the current path dynamically
   const router = useRouter(); // Use for programmatic navigation
 
-  // Memoized function to count products by category
-  const categoryProductCounts = useMemo(() => {
-    return categories.reduce((counts: { [key: string]: number }, category) => {
+  // Memoized function to count products by category and electronics (TV+AC)
+  const { categoryProductCounts, electronicsCount, navCategories } = useMemo(() => {
+    const counts: { [key: string]: number } = {};
+    let tvCount = 0;
+    let acCount = 0;
+    for (const category of categories) {
       const productCount = category.subCategories.reduce(
         (sum, subCategory) => sum + subCategory.products.length,
         0
       );
       counts[category.name] = productCount;
-      return counts;
-    }, {});
+      if (category.id === CategoryId.TV) tvCount += productCount;
+      if (category.id === CategoryId.AC) acCount += productCount;
+    }
+    // Filter out AC from top-level because we show it under Electronics
+    const filtered = categories.filter((c) => c.id !== CategoryId.AC);
+    return { categoryProductCounts: counts, electronicsCount: tvCount + acCount, navCategories: filtered };
   }, []);
 
   // Toggle mobile menu visibility
@@ -114,7 +121,7 @@ const Navbar = () => {
                 setHoveredCategory(null); // Hide subcategories when leaving the dropdown
               }}
             >
-              {categories.map((category) => (
+              {navCategories.map((category) => (
                 <li
                   key={category.label}
                   className={`flex items-center justify-between py-2 px-4 border-b relative ${
@@ -132,11 +139,11 @@ const Navbar = () => {
                   {/* Replace TV with Electronics at first level */}
                   {category.id === CategoryId.TV ? (
                     <>
-                      <div className={`${currentPath?.startsWith("/tv") ? "font-bold text-white text-primary" : "text-gray-700"}`}>
+                      <div className={`${currentPath?.startsWith("/tv") || currentPath?.startsWith("/ac") ? "font-bold text-white text-primary" : "text-gray-700"}`}>
                         ইলেকট্রনিক্স (Electronics) 
                       </div>
-                      <span className={currentPath?.startsWith("/tv") ? "text-white" : "text-gray-500"}>
-                        ({categoryProductCounts[category.name] || 0})
+                      <span className={currentPath?.startsWith("/tv") || currentPath?.startsWith("/ac") ? "text-white" : "text-gray-500"}>
+                        ({electronicsCount || 0})
                       </span>
 
                       {hoveredCategory === "Electronics" && (
@@ -154,6 +161,21 @@ const Navbar = () => {
                               className={`${currentPath?.startsWith("/tv") ? "font-bold text-white" : "text-gray-700"}`}
                             >
                               টিভি (TV)
+                            </Link>
+                          </li>
+                          {/* AC Subcategory */}
+                          <li
+                            className={`py-2 px-4 border-b relative ${
+                              currentPath?.startsWith("/ac")
+                                ? "bg-primary text-white"
+                                : "hover:bg-slate-50"
+                            }`}
+                          >
+                            <Link
+                              href="/ac"
+                              className={`${currentPath?.startsWith("/ac") ? "font-bold text-white" : "text-gray-700"}`}
+                            >
+                              এসি (AC)
                             </Link>
                           </li>
                           
@@ -294,7 +316,7 @@ const Navbar = () => {
         <div className="fixed inset-0 top-16 bg-white z-40 md:hidden">
           <div className="px-4 py-6 space-y-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
             <ul className="space-y-4">
-              {categories.map((category) => (
+              {navCategories.map((category) => (
                 <>
                   <li
                     key={category.label}
@@ -307,7 +329,7 @@ const Navbar = () => {
                         <div className="flex justify-between">
                           <span
                             className={`${
-                              currentPath?.startsWith("/tv")
+                              currentPath?.startsWith("/tv") || currentPath?.startsWith("/ac")
                                 ? "text-primary font-bold"
                                 : "text-gray-700"
                             }`}
@@ -316,12 +338,12 @@ const Navbar = () => {
                           </span>
                           <span
                             className={`${
-                              currentPath?.startsWith("/tv")
+                              currentPath?.startsWith("/tv") || currentPath?.startsWith("/ac")
                                 ? "text-primary"
                                 : "text-gray-500"
                             }`}
                           >
-                            ({categoryProductCounts[category.name] || 0})
+                            ({electronicsCount || 0})
                           </span>
                         </div>
                         
@@ -338,6 +360,19 @@ const Navbar = () => {
                               }`}
                             >
                               টিভি (TV)
+                            </button>
+                          </li>
+                          {/* AC Subcategory */}
+                          <li>
+                            <button
+                              onClick={() => handleSubcategoryClick("/ac")}
+                              className={`${
+                                currentPath?.startsWith("/ac")
+                                  ? "text-primary font-bold"
+                                  : "text-gray-700"
+                              }`}
+                            >
+                              এসি (AC)
                             </button>
                           </li>
                           
