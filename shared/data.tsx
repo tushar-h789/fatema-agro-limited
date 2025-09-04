@@ -24,6 +24,9 @@ import acInverter from "../src/public/Images/ac/1.5 ton, Inverter. 49999.jpg";
 import acNonInverter from "../src/public/Images/ac/1.5 Ton, Non Inverter,44499.jpg";
 import ac16CleanCool from "../src/public/Images/ac/1.6-clen-cool-inv-pro-54999.jpg";
 import ac16UVCool from "../src/public/Images/ac/1.6-uv-cool-inv-pro-59999.jpg";
+import hisenseAC from "../src/public/Images/ac/Hisense-1.5-Ton-Full-DC-Inverter-AC-AC-18TW4RMATD01BU.jpg";
+import greeAC1 from "../src/public/Images/ac/Gree-Ac-1.5-To-।-GS-18XCM32-।-New-Model-2024-।-Official.jpg";
+import greeAC2 from "../src/public/Images/ac/Gree-AC-1.5-Ton-।-GS-18LM410-।-Non-Inverter-Official.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -1198,6 +1201,48 @@ export const categories: Category[] = [
             description:
               "UVCool Inverter Pro 1.6 Ton: হিডেন এলইডি ডিসপ্লে, ৬৫% পর্যন্ত এনার্জি সেভিং, সেল্ফ ক্লিন ৯৯.৯%, সার্জ প্রোটেকশন ৫৫০ভি। ৩০ সেকেন্ড ইনস্ট্যান্ট চিল এবং ১৫ মিনিট লং ডিসট্যান্স ফ্লো। ৬০°C কুলিং, লো ভোল্টেজ ১৪০ভি। ইউভি স্টেরিলাইজেশন প্রযুক্তি সহ। ক্ষমতা ১৯০০০ বিটিইউ, শক্তি ইনপুট ১৬৮০ওয়াট, ইইআর ৩.০৬, চলমান কারেন্ট ৭.৬এ, পাওয়ার ১/২২০/৫০Hz, এয়ার সার্কুলেশন ৮০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32। ইনডোর প্যাকেজ ৯১০×২১৫×৩০৫ মিমি (১৪ কেজি), আউটডোর প্যাকেজ ৯৩৯×৩৯৪×৫৯০ মিমি (৩২.৯ কেজি)। আইডি নুইস ৪৩/৪০/৩৭ ডিবি(A), ওডি নুইস ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ১০ বছর, পার্টস ১ বছর।",
             image: ac16UVCool,
+          },
+          {
+            id: "1005",
+            path: "/ac/haier",
+            label: "Hisense 1.5 Ton Full DC Inverter AC",
+            title: "Hisense 1.5 Ton Full DC Inverter AC | AS-18TW4RMATD01BU",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Hisense AC",
+            price: 45999,
+            size: "1.5 Ton",
+            description:
+              "Hisense 1.5 Ton Full DC Inverter AC: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ/ঘণ্টা, ৬৫% পর্যন্ত এনার্জি সেভিং, কপার টিউব কনডেন্সার গোল্ডেন হাইড্রোফিলিক ফিন সহ। ওয়ারেন্টি: কমপ্রেসর ১২ বছর, মেইন বোর্ড (পিসিবি) ৪ বছর, স্পেয়ার পার্টস ৪ বছর। ফুল ডিসি ইনভার্টার প্রযুক্তি, শক্তিশালী কুলিং পারফরম্যান্স, শব্দহীন অপারেশন।",
+            image: hisenseAC,
+          },
+          {
+            id: "1006",
+            path: "/ac/haier",
+            label: "Gree AC 1.5 Ton GS-18XCM32 New Model 2024",
+            title: "Gree AC 1.5 Ton GS-18XCM32 New Model 2024 | Official",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Gree AC",
+            price: 42999,
+            size: "1.5 Ton",
+            description:
+              "Gree AC 1.5 Ton GS-18XCM32 New Model 2024: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ, পাওয়ার ইনপুট ১৫৯৫ওয়াট, ইইআর ৩.৩০, এয়ার সার্কুলেশন ৯০০ ম³/ঘণ্টা। কোল্ড প্লাজমা জেনারেটর, গোল্ডেন ফিন কনডেন্সার, আই ফিল প্রযুক্তি, কমফোর্টেবল স্লিপিং মোড, অটো ক্লিন ফাংশন। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ১ বছর।",
+            image: greeAC1,
+          },
+          {
+            id: "1007",
+            path: "/ac/haier",
+            label: "Gree AC 1.5 Ton GS-18LM410 Non Inverter",
+            title: "Gree AC 1.5 Ton GS-18LM410 Non Inverter | Official",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Gree AC",
+            price: 38999,
+            size: "1.5 Ton",
+            description:
+              "Gree AC 1.5 Ton GS-18LM410 Non Inverter: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ, পাওয়ার ইনপুট ১৮৩২ওয়াট, ইইআর ২.৮৮, এয়ার সার্কুলেশন ৮১০-১০০০ ম³/ঘণ্টা। কোল্ড প্লাজমা জেনারেটর, গোল্ডেন ফিন কনডেন্সার, আই ফিল প্রযুক্তি, কমফোর্টেবল স্লিপিং মোড, অটো ক্লিন ফাংশন। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ১ বছর।",
+            image: greeAC2,
           },
         ],
       },
