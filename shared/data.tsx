@@ -22,6 +22,8 @@ import siko32D7 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32D7.jpg"
 import siko32Q06 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32Q06.jpg";
 import acInverter from "../src/public/Images/ac/1.5 ton, Inverter. 49999.jpg";
 import acNonInverter from "../src/public/Images/ac/1.5 Ton, Non Inverter,44499.jpg";
+import ac16CleanCool from "../src/public/Images/ac/1.6-clen-cool-inv-pro-54999.jpg";
+import ac16UVCool from "../src/public/Images/ac/1.6-uv-cool-inv-pro-59999.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -1149,7 +1151,7 @@ export const categories: Category[] = [
             price: 49999,
             size: "1.5 Ton",
             description:
-              "CleanCool Inverter 1.5 Ton: Android Hidden LED Display, Up to 65% Energy Saving, Self Clean 99.9%, Surge Protection 550V. Capacity 18000 BTU, Power input 1790W, EER 2.93, Running current 8.2A, Power 1/230/50Hz, Air circulation 800 m³/h. Refrigerant R32. Indoor pkg 941×298×381mm (13.5kg), Outdoor pkg 954×409×625mm (33.5kg). ID Noise 46/42/38 dB(A), OD Noise 55 dB(A). Warranty: Compressor 10y, Parts 1y.",
+              "CleanCool Inverter 1.5 Ton: অ্যান্ড্রয়েড হিডেন এলইডি ডিসপ্লে, ৬৫% পর্যন্ত এনার্জি সেভিং, সেল্ফ ক্লিন ৯৯.৯%, সার্জ প্রোটেকশন ৫৫০ভি। ক্ষমতা ১৮০০০ বিটিইউ, শক্তি ইনপুট ১৭৯০ওয়াট, ইইআর ২.৯৩, চলমান কারেন্ট ৮.২এ, পাওয়ার ১/২৩০/৫০Hz, এয়ার সার্কুলেশন ৮০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32। ইনডোর প্যাকেজ ৯৪১×২৯৮×৩৮১ মিমি (১৩.৫ কেজি), আউটডোর প্যাকেজ ৯৫৪×৪০৯×৬২৫ মিমি (৩৩.৫ কেজি)। আইডি নুইস ৪৬/৪২/৩৮ ডিবি(A), ওডি নুইস ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ১০ বছর, পার্টস ১ বছর।",
             image: acInverter,
           },
           {
@@ -1164,8 +1166,38 @@ export const categories: Category[] = [
             price: 44499,
             size: "1.5 Ton",
             description:
-              "AquaCool Non‑Inverter 1.5 Ton: Cooling 18000 BTU, Input 1800W (max 2100W), EER 2.93, Current 8.5A (max 11.5A), Power 1/230V/50Hz, Air Circulation 1000 m³/h. Refrigerant R32 (1.13kg). Indoor 975×220×318mm (12.5kg), Outdoor 800×280×553mm (37kg). Noise: ID 47/43/40 dB(A), OD 55 dB(A). Warranty: Compressor 5y, Spare Parts 2y, Service 2y.",
+              "AquaCool Non‑Inverter 1.5 Ton: কুলিং ১৮০০০ বিটিইউ, ইনপুট ১৮০০ওয়াট (সর্বাধিক ২১,০০০ওয়াট), ইইআর ২.৯৩, কারেন্ট ৮.৫এ (সর্বাধিক ১১.৫এ), পাওয়ার ১/২৩০ভি/৫০Hz, এয়ার সার্কুলেশন ১০০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32 (১.১৩কেজি)। ইনডোর ৯৭৫×২২০×৩১৮ মিমি (১২.৫ কেজি), আউটডোর ৮০০×২৮০×৫৫৩ মিমি (৩৭ কেজি)। নুইস: আইডি ৪৭/৪৩/৪০ ডিবি(A), ওডি ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ২ বছর, সার্ভিস ২ বছর।",
             image: acNonInverter,
+          },
+          {
+            id: "1003",
+            path: "/ac/haier",
+            label: "Haier 1.6 Ton CleanCool Inverter Pro AC",
+            title:
+              "Haier CleanCool Inverter Pro 1.6 Ton AC | HSU-19CleanCool(INV)(Pro)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 54999,
+            size: "1.6 Ton",
+            description:
+              "CleanCool Inverter Pro 1.6 Ton: হিডেন এলইডি ডিসপ্লে, ৬৫% পর্যন্ত এনার্জি সেভিং, সেল্ফ ক্লিন ৯৯.৯%, সার্জ প্রোটেকশন ৫৫০ভি। ৩০ সেকেন্ড ইনস্ট্যান্ট চিল এবং ১৫ মিনিট লং ডিসট্যান্স ফ্লো। ৬০°C কুলিং, লো ভোল্টেজ ১৪০ভি। ক্ষমতা ১৯০০০ বিটিইউ, শক্তি ইনপুট ১৬৮০ওয়াট, ইইআর ৩.০৬, চলমান কারেন্ট ৭.৬এ, পাওয়ার ১/২২০/৫০Hz, এয়ার সার্কুলেশন ৮০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32। ইনডোর প্যাকেজ ৯১০×২১৫×৩০৫ মিমি (১৪ কেজি), আউটডোর প্যাকেজ ৯৩৯×৩৯৪×৫৯০ মিমি (৩২.৯ কেজি)। আইডি নুইস ৪৩/৪০/৩৭ ডিবি(A), ওডি নুইস ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ১০ বছর, পার্টস ১ বছর।",
+            image: ac16CleanCool,
+          },
+          {
+            id: "1004",
+            path: "/ac/haier",
+            label: "Haier 1.6 Ton UVCool Inverter Pro AC",
+            title:
+              "Haier UVCool Inverter Pro 1.6 Ton AC | HSU-19UVCool(INV)(Pro)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 59999,
+            size: "1.6 Ton",
+            description:
+              "UVCool Inverter Pro 1.6 Ton: হিডেন এলইডি ডিসপ্লে, ৬৫% পর্যন্ত এনার্জি সেভিং, সেল্ফ ক্লিন ৯৯.৯%, সার্জ প্রোটেকশন ৫৫০ভি। ৩০ সেকেন্ড ইনস্ট্যান্ট চিল এবং ১৫ মিনিট লং ডিসট্যান্স ফ্লো। ৬০°C কুলিং, লো ভোল্টেজ ১৪০ভি। ইউভি স্টেরিলাইজেশন প্রযুক্তি সহ। ক্ষমতা ১৯০০০ বিটিইউ, শক্তি ইনপুট ১৬৮০ওয়াট, ইইআর ৩.০৬, চলমান কারেন্ট ৭.৬এ, পাওয়ার ১/২২০/৫০Hz, এয়ার সার্কুলেশন ৮০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32। ইনডোর প্যাকেজ ৯১০×২১৫×৩০৫ মিমি (১৪ কেজি), আউটডোর প্যাকেজ ৯৩৯×৩৯৪×৫৯০ মিমি (৩২.৯ কেজি)। আইডি নুইস ৪৩/৪০/৩৭ ডিবি(A), ওডি নুইস ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ১০ বছর, পার্টস ১ বছর।",
+            image: ac16UVCool,
           },
         ],
       },
@@ -1221,27 +1253,31 @@ export const getAllProducts = (): Product[] => {
 export const getProductsWithSizeSorted = (): Product[] => {
   // Get all products
   const allProducts = getAllProducts();
-  
+
   // Separate products by category
-  const nonTVProducts = allProducts.filter(product => product.categoryId !== CategoryId.TV);
-  const tvProducts = allProducts.filter(product => product.categoryId === CategoryId.TV);
-  
+  const nonTVProducts = allProducts.filter(
+    (product) => product.categoryId !== CategoryId.TV
+  );
+  const tvProducts = allProducts.filter(
+    (product) => product.categoryId === CategoryId.TV
+  );
+
   // Sort TV products with size from small to large (choto theke boro)
-  const tvProductsWithSize = tvProducts.filter(product => product.size);
-  const tvProductsWithoutSize = tvProducts.filter(product => !product.size);
-  
+  const tvProductsWithSize = tvProducts.filter((product) => product.size);
+  const tvProductsWithoutSize = tvProducts.filter((product) => !product.size);
+
   const sortedTVProductsWithSize = tvProductsWithSize.sort((a, b) => {
     // Extract numeric value from size string (e.g., "32″" → 32)
-    const sizeA = parseInt(a.size!.replace(/[^\d]/g, ''));
-    const sizeB = parseInt(b.size!.replace(/[^\d]/g, ''));
-    
+    const sizeA = parseInt(a.size!.replace(/[^\d]/g, ""));
+    const sizeB = parseInt(b.size!.replace(/[^\d]/g, ""));
+
     return sizeA - sizeB; // Ascending order (small to large)
   });
-  
+
   // Return: original products first, then sorted TV products with size, then TV products without size
   return [
     ...nonTVProducts, // Original products (Oil, Jaggery, Meat, Desert)
     ...sortedTVProductsWithSize, // TV products with size (sorted small to large)
-    ...tvProductsWithoutSize // TV products without size
+    ...tvProductsWithoutSize, // TV products without size
   ];
 };
