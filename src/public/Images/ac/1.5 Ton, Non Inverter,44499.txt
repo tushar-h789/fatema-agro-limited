@@ -1,0 +1,34 @@
+Haier 1.5 Ton AquaCool Non-Inverter AC [HSU-18TurboAqua:(FIX)(Pro)]
+Capacity Cooling BTU: 18,000
+Capacity Cooling Power (W): 5,275
+Capacity Heating: N/A
+Power Input Cooling Power Input (W): 1,800 W
+Power Input Heating Power Input (W): N/A
+Max Power Input Cooling (W): 2,100 W
+Max Power Input Heating (W): N/A
+Energy Class & Efficiency SEER/EER: 2.93
+Energy Class & Efficiency COP: N/A
+Running Current Cooling (A): 8.5 A
+Running Current Heating (A) : N/A
+Max Running Current Cooling (A): 11.5 A
+Max Running Current Heating (A): N/A
+Power Supply Phase/Voltage/Frequency: 1 / 230V / 50Hz
+Air Circulation: 1000 m³/h
+Moisture Removal: N/A
+Refrigerant Type: R32
+Refrigerant Standard Quantity: 1.130 Kg
+Refrigerant Pipe Dimensions Liquid Side Diameter: 6 mm
+Refrigerant Pipe Dimensions Gas Side Diameter: 12 mm
+Indoor Unit_Net Dimensions (W/D/H): 975 × 220 × 318 mm
+Indoor Unit_Package Dimensions (W/D/H): 1050 × 397 × 301 mm
+Indoor Unit_Net Weight: 12.5 kg
+Indoor Unit_Gross Weight: 14.0 kg
+Indoor Unit_Sound Power Level [dB(A)] (Hi/Mid/Lo): 47 / 43 / 40
+Outdoor Unit_Net Dimensions (W/D/H): 800 × 280 × 553 mm
+Outdoor Unit_Package Dimensions (W/D/H): 908 × 405 × 625 mm
+Outdoor Unit_Net Weight: 37.0 kg
+Outdoor Unit_Gross Weight: 40.0 kg
+Outdoor Unit_Sound Power Level [dB(A)] (Hi/Mid/Lo/So): 55
+Warranty_Compressor (Yrs): 5
+Warranty_Spare Parts and Components (Yrs): 2
+Warranty_Service (Yrs): 2

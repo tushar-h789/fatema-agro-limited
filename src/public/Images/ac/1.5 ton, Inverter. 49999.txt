@@ -1,0 +1,31 @@
+CleanCool Inverter HSU-18CleanCool:(INV)(3DF)(QA)
+
+Specifications:
+
+HSU-18CleanCool :( INV)(3D)(QA)
+Self Clean Rate 99.9% Self Clean Rate 99.9%
+Up To 65% Energy Saving Up To 65% Energy Saving
+Surge Protection 550V Surge Protection 550w
+Type 1: Wall mounts
+Type 2: Inverter
+Color: White
+Display: Hidden LED Display
+General Parameter:
+
+Capacity (BTU): 18000
+Power input (W): 1790
+EER: 2.93
+Running current (A): 8.2
+Power supply (Ph, V, Hz): 1/230/50HZ
+Air circulation (m3/h): 800
+Refrigerant Type: R32
+ID Package dimension mm (W/D/H): 941*298*381
+ID Gross weight (kg): 13.5
+ID Sound power level [dB (A)] (Hi/Mid/Low): 46/42/38
+OD Package dimension mm (W/D/H): 954*409*625
+OD Gross weight (kg): 33.5
+OD Sound power level [dB (A)]: 55
+Warranty:
+
+Warranty: Compressor 10 years
+Parts 1 year

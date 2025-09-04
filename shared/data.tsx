@@ -18,6 +18,15 @@ import haier32 from "../src/public/Images/tv/Haier 32 Bezel Less Google TV.webp"
 import haier43FHD from "../src/public/Images/tv/Haier H43K85FFX 43 Inch FHD Google TV.webp";
 import haier43QLED from "../src/public/Images/tv/Haier H43S80EUX 43-Inch QLED 4K Android Google TV.webp";
 import haier32Hcast from "../src/public/Images/tv/32 inch H-CAST SERIES LED TV.webp";
+import siko32D7 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32D7.jpg";
+import siko32Q06 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32Q06.jpg";
+import acInverter from "../src/public/Images/ac/1.5 ton, Inverter. 49999.jpg";
+import acNonInverter from "../src/public/Images/ac/1.5 Ton, Non Inverter,44499.jpg";
+import ac16CleanCool from "../src/public/Images/ac/1.6-clen-cool-inv-pro-54999.jpg";
+import ac16UVCool from "../src/public/Images/ac/1.6-uv-cool-inv-pro-59999.jpg";
+import hisenseAC from "../src/public/Images/ac/Hisense-1.5-Ton-Full-DC-Inverter-AC-AC-18TW4RMATD01BU.jpg";
+import greeAC1 from "../src/public/Images/ac/Gree-Ac-1.5-To-।-GS-18XCM32-।-New-Model-2024-।-Official.jpg";
+import greeAC2 from "../src/public/Images/ac/Gree-AC-1.5-Ton-।-GS-18LM410-।-Non-Inverter-Official.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -32,6 +41,7 @@ export enum CategoryId {
   Ghee = "7",
   Desart = "8",
   TV = "9",
+  AC = "10",
 }
 
 // Enum for sub-category IDs
@@ -100,6 +110,9 @@ export enum SubCategoryId {
   Haier = "9.4",
   HaierQLED = "9.5",
   HaierHcast = "9.6",
+  Siko = "9.7",
+  // AC subcategories
+  HaierAC = "10.1",
 }
 
 // Product interface
@@ -1076,6 +1089,163 @@ export const categories: Category[] = [
           },
         ],
       },
+      {
+        id: SubCategoryId.Siko,
+        label: "SIKO",
+        name: "সিকো (SIKO)",
+        path: "/tv/siko",
+        image: siko32D7,
+        products: [
+          {
+            id: "909",
+            path: "/tv/siko",
+            label: "SIKO 32″ SMART TV-2GB 32D7",
+            title: "SIKO 32″ SMART TV-2GB | 32D7",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Siko,
+            subCategoryName: "SIKO",
+            price: 0,
+            size: "32″",
+            description:
+              "SIKO 32D7 একটি 32-ইঞ্চি ফুল HD (1920×1080) স্মার্ট LED টিভি। Android 11, 2GB RAM/16GB ROM, 4‑Core CPU (2x Cortex‑A55), DLED backlight, 3000:1 কনট্রাস্ট, 20ms রেসপন্স টাইম। কানেক্টিভিটি: HDMI 1.3/1.4, USB 2.0, AV, RF, LAN, Wi‑Fi। YouTube/Netflix সাপোর্ট। অডিও: 1×10W স্টেরিও, ব্যাক সাইড ডুয়াল স্পিকার। ফাইল সাপোর্ট: Audio MP3/WMA/AC3; Video MPEG/AVI/MOV/MKV/DAT/MP4/VOB; Image JPG/JPEG/PNG/BMP। পাওয়ার: AC 110‑240V, Max 75W, Standby <0.5W। ওয়ারেন্টি: প্যানেল/প্যানেল রিপ্লেসমেন্ট 1 বছর, Best free service 5 বছর।",
+            image: siko32D7,
+          },
+          {
+            id: "910",
+            path: "/tv/siko",
+            label: "SIKO 32″ SMART TV-2GB 32Q06",
+            title: "SIKO 32″ SMART TV-2GB | 32Q06",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Siko,
+            subCategoryName: "SIKO",
+            price: 0,
+            size: "32″",
+            description:
+              "SIKO 32Q06 একটি 32-ইঞ্চি ফুল HD (1920×1080) স্মার্ট LED টিভি। Android 11, 2GB RAM/16GB ROM, 4‑Core CPU (2x Cortex‑A55), DLED backlight, 3000:1 কনট্রাস্ট, 20ms রেসপন্স টাইম। কানেক্টিভিটি: HDMI 1.3/1.4, USB 2.0, AV, RF, LAN, Wi‑Fi। YouTube/Netflix সাপোর্ট। অডিও: 1×10W স্টেরিও, ব্যাক সাইড ডুয়াল স্পিকার। ফাইল সাপোর্ট: Audio MP3/WMA/AC3; Video MPEG/AVI/MOV/MKV/DAT/MP4/VOB; Image JPG/JPEG/PNG/BMP। পাওয়ার: AC 110‑240V, Max 75W, Standby <0.5W। ওয়ারেন্টি: প্যানেল/প্যানেল রিপ্লেসমেন্ট 1 বছর, Best free service 5 বছর।",
+            image: siko32Q06,
+          },
+        ],
+      },
+    ],
+  },
+  // AC
+  {
+    id: CategoryId.AC,
+    label: "AC",
+    name: "এসি (AC)",
+    path: "/ac",
+    subCategories: [
+      {
+        id: SubCategoryId.HaierAC,
+        label: "Haier AC",
+        name: "হায়ার এসি (Haier AC)",
+        path: "/ac/haier",
+        image: acInverter,
+        products: [
+          {
+            id: "1001",
+            path: "/ac/haier",
+            label: "Haier 1.5 Ton Inverter AC",
+            title:
+              "Haier CleanCool Inverter 1.5 Ton AC | HSU-18CleanCool (INV)(3DF)(QA)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 49999,
+            size: "1.5 Ton",
+            description:
+              "CleanCool Inverter 1.5 Ton: অ্যান্ড্রয়েড হিডেন এলইডি ডিসপ্লে, ৬৫% পর্যন্ত এনার্জি সেভিং, সেল্ফ ক্লিন ৯৯.৯%, সার্জ প্রোটেকশন ৫৫০ভি। ক্ষমতা ১৮০০০ বিটিইউ, শক্তি ইনপুট ১৭৯০ওয়াট, ইইআর ২.৯৩, চলমান কারেন্ট ৮.২এ, পাওয়ার ১/২৩০/৫০Hz, এয়ার সার্কুলেশন ৮০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32। ইনডোর প্যাকেজ ৯৪১×২৯৮×৩৮১ মিমি (১৩.৫ কেজি), আউটডোর প্যাকেজ ৯৫৪×৪০৯×৬২৫ মিমি (৩৩.৫ কেজি)। আইডি নুইস ৪৬/৪২/৩৮ ডিবি(A), ওডি নুইস ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ১০ বছর, পার্টস ১ বছর।",
+            image: acInverter,
+          },
+          {
+            id: "1002",
+            path: "/ac/haier",
+            label: "Haier 1.5 Ton Non‑Inverter AC",
+            title:
+              "Haier AquaCool 1.5 Ton Non‑Inverter AC | HSU-18TurboAqua (FIX)(Pro)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 44499,
+            size: "1.5 Ton",
+            description:
+              "AquaCool Non‑Inverter 1.5 Ton: কুলিং ১৮০০০ বিটিইউ, ইনপুট ১৮০০ওয়াট (সর্বাধিক ২১,০০০ওয়াট), ইইআর ২.৯৩, কারেন্ট ৮.৫এ (সর্বাধিক ১১.৫এ), পাওয়ার ১/২৩০ভি/৫০Hz, এয়ার সার্কুলেশন ১০০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32 (১.১৩কেজি)। ইনডোর ৯৭৫×২২০×৩১৮ মিমি (১২.৫ কেজি), আউটডোর ৮০০×২৮০×৫৫৩ মিমি (৩৭ কেজি)। নুইস: আইডি ৪৭/৪৩/৪০ ডিবি(A), ওডি ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ২ বছর, সার্ভিস ২ বছর।",
+            image: acNonInverter,
+          },
+          {
+            id: "1003",
+            path: "/ac/haier",
+            label: "Haier 1.6 Ton CleanCool Inverter Pro AC",
+            title:
+              "Haier CleanCool Inverter Pro 1.6 Ton AC | HSU-19CleanCool(INV)(Pro)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 54999,
+            size: "1.6 Ton",
+            description:
+              "CleanCool Inverter Pro 1.6 Ton: হিডেন এলইডি ডিসপ্লে, ৬৫% পর্যন্ত এনার্জি সেভিং, সেল্ফ ক্লিন ৯৯.৯%, সার্জ প্রোটেকশন ৫৫০ভি। ৩০ সেকেন্ড ইনস্ট্যান্ট চিল এবং ১৫ মিনিট লং ডিসট্যান্স ফ্লো। ৬০°C কুলিং, লো ভোল্টেজ ১৪০ভি। ক্ষমতা ১৯০০০ বিটিইউ, শক্তি ইনপুট ১৬৮০ওয়াট, ইইআর ৩.০৬, চলমান কারেন্ট ৭.৬এ, পাওয়ার ১/২২০/৫০Hz, এয়ার সার্কুলেশন ৮০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32। ইনডোর প্যাকেজ ৯১০×২১৫×৩০৫ মিমি (১৪ কেজি), আউটডোর প্যাকেজ ৯৩৯×৩৯৪×৫৯০ মিমি (৩২.৯ কেজি)। আইডি নুইস ৪৩/৪০/৩৭ ডিবি(A), ওডি নুইস ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ১০ বছর, পার্টস ১ বছর।",
+            image: ac16CleanCool,
+          },
+          {
+            id: "1004",
+            path: "/ac/haier",
+            label: "Haier 1.6 Ton UVCool Inverter Pro AC",
+            title:
+              "Haier UVCool Inverter Pro 1.6 Ton AC | HSU-19UVCool(INV)(Pro)",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Haier AC",
+            price: 59999,
+            size: "1.6 Ton",
+            description:
+              "UVCool Inverter Pro 1.6 Ton: হিডেন এলইডি ডিসপ্লে, ৬৫% পর্যন্ত এনার্জি সেভিং, সেল্ফ ক্লিন ৯৯.৯%, সার্জ প্রোটেকশন ৫৫০ভি। ৩০ সেকেন্ড ইনস্ট্যান্ট চিল এবং ১৫ মিনিট লং ডিসট্যান্স ফ্লো। ৬০°C কুলিং, লো ভোল্টেজ ১৪০ভি। ইউভি স্টেরিলাইজেশন প্রযুক্তি সহ। ক্ষমতা ১৯০০০ বিটিইউ, শক্তি ইনপুট ১৬৮০ওয়াট, ইইআর ৩.০৬, চলমান কারেন্ট ৭.৬এ, পাওয়ার ১/২২০/৫০Hz, এয়ার সার্কুলেশন ৮০০ ম³/ঘণ্টা। রেফ্রিজারেন্ট R32। ইনডোর প্যাকেজ ৯১০×২১৫×৩০৫ মিমি (১৪ কেজি), আউটডোর প্যাকেজ ৯৩৯×৩৯৪×৫৯০ মিমি (৩২.৯ কেজি)। আইডি নুইস ৪৩/৪০/৩৭ ডিবি(A), ওডি নুইস ৫৫ ডিবি(A)। ওয়ারেন্টি: কমপ্রেসর ১০ বছর, পার্টস ১ বছর।",
+            image: ac16UVCool,
+          },
+          {
+            id: "1005",
+            path: "/ac/haier",
+            label: "Hisense 1.5 Ton Full DC Inverter AC",
+            title: "Hisense 1.5 Ton Full DC Inverter AC | AS-18TW4RMATD01BU",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Hisense AC",
+            price: 45999,
+            size: "1.5 Ton",
+            description:
+              "Hisense 1.5 Ton Full DC Inverter AC: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ/ঘণ্টা, ৬৫% পর্যন্ত এনার্জি সেভিং, কপার টিউব কনডেন্সার গোল্ডেন হাইড্রোফিলিক ফিন সহ। ওয়ারেন্টি: কমপ্রেসর ১২ বছর, মেইন বোর্ড (পিসিবি) ৪ বছর, স্পেয়ার পার্টস ৪ বছর। ফুল ডিসি ইনভার্টার প্রযুক্তি, শক্তিশালী কুলিং পারফরম্যান্স, শব্দহীন অপারেশন।",
+            image: hisenseAC,
+          },
+          {
+            id: "1006",
+            path: "/ac/haier",
+            label: "Gree AC 1.5 Ton GS-18XCM32 New Model 2024",
+            title: "Gree AC 1.5 Ton GS-18XCM32 New Model 2024 | Official",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Gree AC",
+            price: 42999,
+            size: "1.5 Ton",
+            description:
+              "Gree AC 1.5 Ton GS-18XCM32 New Model 2024: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ, পাওয়ার ইনপুট ১৫৯৫ওয়াট, ইইআর ৩.৩০, এয়ার সার্কুলেশন ৯০০ ম³/ঘণ্টা। কোল্ড প্লাজমা জেনারেটর, গোল্ডেন ফিন কনডেন্সার, আই ফিল প্রযুক্তি, কমফোর্টেবল স্লিপিং মোড, অটো ক্লিন ফাংশন। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ১ বছর।",
+            image: greeAC1,
+          },
+          {
+            id: "1007",
+            path: "/ac/haier",
+            label: "Gree AC 1.5 Ton GS-18LM410 Non Inverter",
+            title: "Gree AC 1.5 Ton GS-18LM410 Non Inverter | Official",
+            categoryId: CategoryId.AC,
+            subCategoryId: SubCategoryId.HaierAC,
+            subCategoryName: "Gree AC",
+            price: 38999,
+            size: "1.5 Ton",
+            description:
+              "Gree AC 1.5 Ton GS-18LM410 Non Inverter: কুলিং ক্যাপাসিটি ১৮০০০ বিটিইউ, পাওয়ার ইনপুট ১৮৩২ওয়াট, ইইআর ২.৮৮, এয়ার সার্কুলেশন ৮১০-১০০০ ম³/ঘণ্টা। কোল্ড প্লাজমা জেনারেটর, গোল্ডেন ফিন কনডেন্সার, আই ফিল প্রযুক্তি, কমফোর্টেবল স্লিপিং মোড, অটো ক্লিন ফাংশন। ওয়ারেন্টি: কমপ্রেসর ৫ বছর, স্পেয়ার পার্টস ১ বছর, ফ্রি সার্ভিস ১ বছর।",
+            image: greeAC2,
+          },
+        ],
+      },
     ],
   },
 ];
@@ -1128,27 +1298,31 @@ export const getAllProducts = (): Product[] => {
 export const getProductsWithSizeSorted = (): Product[] => {
   // Get all products
   const allProducts = getAllProducts();
-  
+
   // Separate products by category
-  const nonTVProducts = allProducts.filter(product => product.categoryId !== CategoryId.TV);
-  const tvProducts = allProducts.filter(product => product.categoryId === CategoryId.TV);
-  
+  const nonTVProducts = allProducts.filter(
+    (product) => product.categoryId !== CategoryId.TV
+  );
+  const tvProducts = allProducts.filter(
+    (product) => product.categoryId === CategoryId.TV
+  );
+
   // Sort TV products with size from small to large (choto theke boro)
-  const tvProductsWithSize = tvProducts.filter(product => product.size);
-  const tvProductsWithoutSize = tvProducts.filter(product => !product.size);
-  
+  const tvProductsWithSize = tvProducts.filter((product) => product.size);
+  const tvProductsWithoutSize = tvProducts.filter((product) => !product.size);
+
   const sortedTVProductsWithSize = tvProductsWithSize.sort((a, b) => {
     // Extract numeric value from size string (e.g., "32″" → 32)
-    const sizeA = parseInt(a.size!.replace(/[^\d]/g, ''));
-    const sizeB = parseInt(b.size!.replace(/[^\d]/g, ''));
-    
+    const sizeA = parseInt(a.size!.replace(/[^\d]/g, ""));
+    const sizeB = parseInt(b.size!.replace(/[^\d]/g, ""));
+
     return sizeA - sizeB; // Ascending order (small to large)
   });
-  
+
   // Return: original products first, then sorted TV products with size, then TV products without size
   return [
     ...nonTVProducts, // Original products (Oil, Jaggery, Meat, Desert)
     ...sortedTVProductsWithSize, // TV products with size (sorted small to large)
-    ...tvProductsWithoutSize // TV products without size
+    ...tvProductsWithoutSize, // TV products without size
   ];
 };
