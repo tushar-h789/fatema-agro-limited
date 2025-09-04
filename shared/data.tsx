@@ -18,6 +18,8 @@ import haier32 from "../src/public/Images/tv/Haier 32 Bezel Less Google TV.webp"
 import haier43FHD from "../src/public/Images/tv/Haier H43K85FFX 43 Inch FHD Google TV.webp";
 import haier43QLED from "../src/public/Images/tv/Haier H43S80EUX 43-Inch QLED 4K Android Google TV.webp";
 import haier32Hcast from "../src/public/Images/tv/32 inch H-CAST SERIES LED TV.webp";
+import siko32D7 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32D7.jpg";
+import siko32Q06 from "../src/public/Images/tv/SIKO 32″ SMART TV-2GB  32Q06.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -100,6 +102,7 @@ export enum SubCategoryId {
   Haier = "9.4",
   HaierQLED = "9.5",
   HaierHcast = "9.6",
+  Siko = "9.7",
 }
 
 // Product interface
@@ -1073,6 +1076,43 @@ export const categories: Category[] = [
             description:
               "Haier H32D2MS 32″ H-CAST SERIES LED TV একটি আধুনিক LED টিভি যা H-CAST প্রযুক্তি ব্যবহার করে। এই টিভিতে রয়েছে LED ডিসপ্লে, HD রেজোলিউশন, এবং উন্নত ইমেজ প্রসেসিং। H-CAST প্রযুক্তি ব্যবহার করে এই টিভি দ্রুত এবং সহজ কানেক্টিভিটি নিশ্চিত করে। এই টিভিতে রয়েছে HDMI, USB, এবং অন্যান্য কানেক্টিভিটি অপশন। হালকা ওজন এবং স্টাইলিশ ডিজাইন সহ এটি আপনার বাড়িতে একটি সুন্দর সংযোজন। এই টিভি আপনার দৈনন্দিন টিভি দেখার অভিজ্ঞতাকে আরও উন্নত করে তোলে। ওয়ারেন্টি: প্যানেল ৪ বছর, স্পেয়ার পার্টস ও সার্ভিস ২ বছর।",
             image: haier32Hcast,
+          },
+        ],
+      },
+      {
+        id: SubCategoryId.Siko,
+        label: "SIKO",
+        name: "সিকো (SIKO)",
+        path: "/tv/siko",
+        image: siko32D7,
+        products: [
+          {
+            id: "909",
+            path: "/tv/siko",
+            label: "SIKO 32″ SMART TV-2GB 32D7",
+            title: "SIKO 32″ SMART TV-2GB | 32D7",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Siko,
+            subCategoryName: "SIKO",
+            price: 0,
+            size: "32″",
+            description:
+              "SIKO 32D7 একটি 32-ইঞ্চি ফুল HD (1920×1080) স্মার্ট LED টিভি। Android 11, 2GB RAM/16GB ROM, 4‑Core CPU (2x Cortex‑A55), DLED backlight, 3000:1 কনট্রাস্ট, 20ms রেসপন্স টাইম। কানেক্টিভিটি: HDMI 1.3/1.4, USB 2.0, AV, RF, LAN, Wi‑Fi। YouTube/Netflix সাপোর্ট। অডিও: 1×10W স্টেরিও, ব্যাক সাইড ডুয়াল স্পিকার। ফাইল সাপোর্ট: Audio MP3/WMA/AC3; Video MPEG/AVI/MOV/MKV/DAT/MP4/VOB; Image JPG/JPEG/PNG/BMP। পাওয়ার: AC 110‑240V, Max 75W, Standby <0.5W। ওয়ারেন্টি: প্যানেল/প্যানেল রিপ্লেসমেন্ট 1 বছর, Best free service 5 বছর।",
+            image: siko32D7,
+          },
+          {
+            id: "910",
+            path: "/tv/siko",
+            label: "SIKO 32″ SMART TV-2GB 32Q06",
+            title: "SIKO 32″ SMART TV-2GB | 32Q06",
+            categoryId: CategoryId.TV,
+            subCategoryId: SubCategoryId.Siko,
+            subCategoryName: "SIKO",
+            price: 0,
+            size: "32″",
+            description:
+              "SIKO 32Q06 একটি 32-ইঞ্চি ফুল HD (1920×1080) স্মার্ট LED টিভি। Android 11, 2GB RAM/16GB ROM, 4‑Core CPU (2x Cortex‑A55), DLED backlight, 3000:1 কনট্রাস্ট, 20ms রেসপন্স টাইম। কানেক্টিভিটি: HDMI 1.3/1.4, USB 2.0, AV, RF, LAN, Wi‑Fi। YouTube/Netflix সাপোর্ট। অডিও: 1×10W স্টেরিও, ব্যাক সাইড ডুয়াল স্পিকার। ফাইল সাপোর্ট: Audio MP3/WMA/AC3; Video MPEG/AVI/MOV/MKV/DAT/MP4/VOB; Image JPG/JPEG/PNG/BMP। পাওয়ার: AC 110‑240V, Max 75W, Standby <0.5W। ওয়ারেন্টি: প্যানেল/প্যানেল রিপ্লেসমেন্ট 1 বছর, Best free service 5 বছর।",
+            image: siko32Q06,
           },
         ],
       },
