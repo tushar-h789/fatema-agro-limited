@@ -1311,7 +1311,7 @@ export const categories: Category[] = [
             categoryId: CategoryId.HairDryer,
             subCategoryId: SubCategoryId.PhilipsHairDryer,
             subCategoryName: "ফিলিপস হেয়ার ড্রায়ার",
-            price: 2420,
+            price: 1799,
             quantity: "১ পিস",
             size: "1000W",
             description:
