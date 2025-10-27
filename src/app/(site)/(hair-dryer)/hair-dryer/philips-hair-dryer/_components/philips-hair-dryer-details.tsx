@@ -26,10 +26,10 @@ export default function PhilipsHairDryerDetails({
 }: PhilipsHairDryerDetailsProps) {
   const router = useRouter();
   const [quantity, setQuantity] = useState<number>(1);
-  const [basePrice, setBasePrice] = useState<number>(1799);
+  const [basePrice, setBasePrice] = useState<number>(1800);
 
   useEffect(() => {
-    setBasePrice(1799); // Default price for hair dryer
+    setBasePrice(1800); // Default price for hair dryer
   }, [product]);
 
   const totalPrice = basePrice * quantity;
