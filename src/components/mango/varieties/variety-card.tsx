@@ -1,6 +1,8 @@
 import Image from "next/image";
 import MangoBadge from "../ui/mango-badge";
 import type { MangoVariety } from "../mango-data";
+import AddToCartButton from "@/components/cart/add-to-cart-button";
+import MangoOrderButton from "@/components/mango/mango-order-button";
 
 export default function MangoVarietyCard({ item }: { item: MangoVariety }) {
   return (
@@ -35,18 +37,26 @@ export default function MangoVarietyCard({ item }: { item: MangoVariety }) {
         </div>
 
         <div className="grid grid-cols-2 gap-2 mt-6">
-          <button
-            type="button"
+          <AddToCartButton
+            line={{
+              id: `mango:${item.id}`,
+              title: item.name,
+              imageUrl: item.imageUrl,
+              unitPrice: item.price.amount,
+              unitLabel: item.price.unitLabel,
+            }}
             className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg font-semibold hover:bg-slate-200 transition-colors"
-          >
-            কার্টে যোগ
-          </button>
-          <button
-            type="button"
+          />
+          <MangoOrderButton
+            varietyId={item.id}
+            title={item.name}
+            imageUrl={item.imageUrl}
+            unitPrice={item.price.amount}
+            unitLabel={item.price.unitLabel}
             className="bg-amber-400 text-[#6b4900] px-4 py-2 rounded-lg font-extrabold hover:brightness-95 transition-all"
           >
             {item.ctaLabel}
-          </button>
+          </MangoOrderButton>
         </div>
       </div>
     </div>

@@ -8,12 +8,14 @@ import CartIcon from "../../../shared/icons/cart-icon";
 import { Menu, X } from "lucide-react"; // Add this import
 import Image from "next/image";
 import logo from "../../public/logo.png";
+import { useCart } from "@/components/cart/cart-store";
 
 const Navbar = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   const dropdownRef = useRef<HTMLUListElement>(null);
+  const { totalItems } = useCart();
 
   const currentPath = usePathname(); // Get the current path dynamically
   const router = useRouter(); // Use for programmatic navigation
@@ -311,8 +313,20 @@ const Navbar = () => {
 
         {/* Cart and contact info */}
         <div className="hidden md:flex items-center space-x-4">
-          <div className="flex items-center gap-1">
-            <CartIcon className="w-6 h-6" />
+          <div className="flex items-center gap-4">
+            <Link
+              href="/cart"
+              aria-label="Cart"
+              className="relative inline-flex items-center justify-center p-2 rounded-lg hover:bg-slate-700 transition-colors"
+            >
+              <CartIcon className="w-6 h-6" />
+              {totalItems > 0 ? (
+                <span className="absolute -top-1 -right-1 min-w-5 h-5 px-1 rounded-full bg-primary text-white text-[11px] font-extrabold flex items-center justify-center">
+                  {totalItems}
+                </span>
+              ) : null}
+            </Link>
+
             <a className="font-semibold font-roboto" href="tel:+8801719355375">
               +8801719355375
             </a>
@@ -383,6 +397,13 @@ const Navbar = () => {
                   }`}
                 >
                   মাংস
+                </Link>
+                <Link
+                  onClick={() => setMobileMenuVisible(false)}
+                  href="/cart"
+                  className="px-3 py-1 rounded-full text-sm border bg-white text-gray-700 border-gray-200 hover:bg-slate-50 transition-colors"
+                >
+                  কার্ট{totalItems > 0 ? ` (${totalItems})` : ""}
                 </Link>
               </div>
             </div>

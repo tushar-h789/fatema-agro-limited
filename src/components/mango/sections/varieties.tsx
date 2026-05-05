@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { ShoppingCart, Bookmark } from "lucide-react";
+import { Bookmark } from "lucide-react";
 import MangoContainer from "../ui/mango-container";
 import MangoBadge from "../ui/mango-badge";
 import { mangoVarieties } from "../mango-data";
 import Image from "next/image";
+import AddToCartButton from "@/components/cart/add-to-cart-button";
+import MangoOrderButton from "@/components/mango/mango-order-button";
 
 export default function MangoVarieties() {
   return (
@@ -75,8 +77,12 @@ export default function MangoVarieties() {
                   </p>
 
                   <div className="flex gap-2">
-                    <button
-                      type="button"
+                    <MangoOrderButton
+                      varietyId={v.id}
+                      title={v.name}
+                      imageUrl={v.imageUrl}
+                      unitPrice={v.price.amount}
+                      unitLabel={v.price.unitLabel}
                       className={
                         isPreorder
                           ? "flex-1 rounded-xl py-3 font-semibold border-2 border-[#7e5700] text-[#7e5700] hover:bg-[#7e5700] hover:text-white transition-colors"
@@ -84,18 +90,28 @@ export default function MangoVarieties() {
                       }
                     >
                       {v.ctaLabel}
-                    </button>
-                    <button
-                      type="button"
-                      aria-label={isPreorder ? "Bookmark" : "Add to cart"}
-                      className="w-12 h-12 rounded-xl border-2 border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
-                    >
-                      {isPreorder ? (
+                    </MangoOrderButton>
+                    {isPreorder ? (
+                      <button
+                        type="button"
+                        aria-label="Bookmark"
+                        className="w-12 h-12 rounded-xl border-2 border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
+                      >
                         <Bookmark className="w-5 h-5" />
-                      ) : (
-                        <ShoppingCart className="w-5 h-5" />
-                      )}
-                    </button>
+                      </button>
+                    ) : (
+                      <AddToCartButton
+                        variant="icon"
+                        line={{
+                          id: `mango:${v.id}`,
+                          title: v.name,
+                          imageUrl: v.imageUrl,
+                          unitPrice: v.price.amount,
+                          unitLabel: v.price.unitLabel,
+                        }}
+                        className="w-12 h-12 rounded-xl border-2 border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors shrink-0"
+                      />
+                    )}
                   </div>
                 </div>
               </div>

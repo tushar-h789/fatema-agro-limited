@@ -5,6 +5,7 @@ export type MangoFeature = {
 };
 
 export type MangoVariety = {
+  id: string;
   name: string;
   badge?: { label: string; tone: "primary" | "secondary" | "neutral" };
   price: { amount: number; unitLabel: string };
@@ -62,6 +63,7 @@ export const mangoFeatures: MangoFeature[] = [
 
 export const mangoVarieties: MangoVariety[] = [
   {
+    id: "amrapali",
     name: "আম্রপালি",
     badge: { label: "স্টকে আছে", tone: "secondary" },
     price: { amount: 120, unitLabel: "/ কেজি" },
@@ -73,6 +75,7 @@ export const mangoVarieties: MangoVariety[] = [
     tags: ["sweet", "popular"],
   },
   {
+    id: "langra",
     name: "ল্যাংড়া",
     badge: { label: "সেরা বিক্রীত", tone: "primary" },
     price: { amount: 110, unitLabel: "/ কেজি" },
@@ -84,6 +87,7 @@ export const mangoVarieties: MangoVariety[] = [
     tags: ["tangySweet", "popular"],
   },
   {
+    id: "himsagor",
     name: "হিমসাগর",
     badge: { label: "প্রি-অর্ডার", tone: "neutral" },
     price: { amount: 130, unitLabel: "/ কেজি" },
@@ -95,6 +99,7 @@ export const mangoVarieties: MangoVariety[] = [
     tags: ["sweet", "preorder"],
   },
   {
+    id: "fazli",
     name: "ফজলী",
     badge: { label: "বড় আকার", tone: "primary" },
     price: { amount: 100, unitLabel: "/ কেজি" },
@@ -105,6 +110,7 @@ export const mangoVarieties: MangoVariety[] = [
     tags: ["tangySweet"],
   },
   {
+    id: "gopalbhog",
     name: "গোপালভোগ",
     badge: { label: "আগাম জাত", tone: "secondary" },
     price: { amount: 140, unitLabel: "/ কেজি" },
@@ -116,6 +122,7 @@ export const mangoVarieties: MangoVariety[] = [
     tags: ["sweet", "popular"],
   },
   {
+    id: "khirsapat",
     name: "ক্ষীরশাপাত",
     badge: { label: "জিআই পণ্য", tone: "secondary" },
     price: { amount: 145, unitLabel: "/ কেজি" },
@@ -127,6 +134,7 @@ export const mangoVarieties: MangoVariety[] = [
     tags: ["sweet"],
   },
   {
+    id: "aswini",
     name: "আশ্বিনী",
     badge: { label: "নাবি জাত", tone: "primary" },
     price: { amount: 90, unitLabel: "/ কেজি" },
@@ -137,6 +145,7 @@ export const mangoVarieties: MangoVariety[] = [
     tags: ["tangySweet"],
   },
   {
+    id: "haribhanga",
     name: "হাড়িভাঙ্গা",
     badge: { label: "অনন্য স্বাদ", tone: "secondary" },
     price: { amount: 125, unitLabel: "/ কেজি" },
