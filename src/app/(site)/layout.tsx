@@ -1,7 +1,6 @@
 import Footer from "@/app/_components/footer";
 import Navbar from "@/app/_components/navbar";
 import React, { ReactNode } from "react";
-import Header from "../_components/header";
 
 interface SiteLayoutProps {
   children: ReactNode;

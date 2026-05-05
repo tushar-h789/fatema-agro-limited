@@ -262,6 +262,15 @@ const Navbar = () => {
               <Link href="/">হোম</Link>
             </li>
             <li
+              className={`font-roboto ${
+                currentPath === "/mango"
+                  ? "bg-primary px-4 py-1 rounded-lg text-slate-100 font-bold"
+                  : ""
+              }`}
+            >
+              <Link href="/mango">আম</Link>
+            </li>
+            <li
               className={`mx-2 font-roboto ${
                 currentPath === "/gur"
                   ? "bg-primary px-4 py-1 rounded-lg text-slate-100 font-bold"
@@ -315,6 +324,68 @@ const Navbar = () => {
       {isMobileMenuVisible && (
         <div className="fixed inset-0 top-16 bg-white z-40 md:hidden">
           <div className="px-4 py-6 space-y-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
+            <div className="rounded-lg border border-gray-200 p-3">
+              <p className="text-xs font-semibold text-gray-500 mb-2">
+                Quick links
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Link
+                  onClick={() => setMobileMenuVisible(false)}
+                  href="/"
+                  className={`px-3 py-1 rounded-full text-sm border ${
+                    currentPath === "/"
+                      ? "bg-primary text-white border-primary"
+                      : "bg-white text-gray-700 border-gray-200"
+                  }`}
+                >
+                  হোম
+                </Link>
+                <Link
+                  onClick={() => setMobileMenuVisible(false)}
+                  href="/mango"
+                  className={`px-3 py-1 rounded-full text-sm border ${
+                    currentPath === "/mango"
+                      ? "bg-primary text-white border-primary"
+                      : "bg-white text-gray-700 border-gray-200"
+                  }`}
+                >
+                  আম
+                </Link>
+                <Link
+                  onClick={() => setMobileMenuVisible(false)}
+                  href="/gur"
+                  className={`px-3 py-1 rounded-full text-sm border ${
+                    currentPath === "/gur"
+                      ? "bg-primary text-white border-primary"
+                      : "bg-white text-gray-700 border-gray-200"
+                  }`}
+                >
+                  গুড়
+                </Link>
+                <Link
+                  onClick={() => setMobileMenuVisible(false)}
+                  href="/tel"
+                  className={`px-3 py-1 rounded-full text-sm border ${
+                    currentPath === "/tel"
+                      ? "bg-primary text-white border-primary"
+                      : "bg-white text-gray-700 border-gray-200"
+                  }`}
+                >
+                  তেল
+                </Link>
+                <Link
+                  onClick={() => setMobileMenuVisible(false)}
+                  href="/mangso"
+                  className={`px-3 py-1 rounded-full text-sm border ${
+                    currentPath === "/mangso"
+                      ? "bg-primary text-white border-primary"
+                      : "bg-white text-gray-700 border-gray-200"
+                  }`}
+                >
+                  মাংস
+                </Link>
+              </div>
+            </div>
             <ul className="space-y-4">
               {navCategories.map((category) => (
                 <>
