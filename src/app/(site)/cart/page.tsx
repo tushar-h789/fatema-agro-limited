@@ -163,16 +163,15 @@ export default function CartPage() {
                   </div>
                 </div>
 
-                <button
-                  type="button"
+                <Link
+                  href="/checkout"
                   className="mt-6 w-full inline-flex items-center justify-center rounded-full px-8 py-3 font-semibold text-white bg-gradient-to-br from-[#ffb300] to-[#ff8f00] shadow-lg hover:shadow-xl transition-shadow"
                 >
                   অর্ডার কনফার্ম করুন
-                </button>
+                </Link>
 
                 <p className="mt-3 text-xs text-slate-500">
-                  নোট: এখন শুধু ডেমো কার্ট। পেমেন্ট/অর্ডার ফ্লো পরের ধাপে যুক্ত করা
-                  যাবে।
+                  চেকআউটে গিয়ে ঠিকানা দিন। ক্যাশ অন ডেলিভারি।
                 </p>
               </aside>
             </div>

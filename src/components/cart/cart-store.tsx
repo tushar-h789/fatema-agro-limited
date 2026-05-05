@@ -15,6 +15,8 @@ const STORAGE_KEY = "fatemaagro_cart_v1";
 
 type CartApi = {
   state: CartState;
+  /** true after cart is loaded from localStorage (avoid redirect flash on checkout). */
+  hydrated: boolean;
   totalItems: number;
   subtotal: number;
   addLine: (line: Omit<CartLine, "quantity"> & { quantity?: number }) => void;
@@ -101,8 +103,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
   );
 
   const value: CartApi = useMemo(
-    () => ({ state, totalItems, subtotal, addLine, removeLine, setQuantity, clear }),
-    [addLine, clear, removeLine, setQuantity, state, subtotal, totalItems]
+    () => ({
+      state,
+      hydrated,
+      totalItems,
+      subtotal,
+      addLine,
+      removeLine,
+      setQuantity,
+      clear,
+    }),
+    [addLine, clear, hydrated, removeLine, setQuantity, state, subtotal, totalItems]
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

@@ -1,0 +1,17 @@
+{
+  "name": "fatemaagro — authentic products",
+  "short_name": "fatemaagro",
+  "description": "Discover authentic products at fatemaagro.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a5276",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}
