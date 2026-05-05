@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { z } from "zod";
 import MangoContainer from "@/components/mango/ui/mango-container";
 import { useCart } from "@/components/cart/cart-store";
@@ -85,10 +85,12 @@ export default function CheckoutPage() {
   const [errors, setErrors] = useState<FieldErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  /** অর্ডার সফল হলে clear() এ কার্ট খালি হয়; তখন এই ref ছাড়া useEffect আবার /cart এ পাঠিয়ে সাকসেস পেজ ভেঙে দেয় */
+  const completingOrderRef = useRef(false);
 
   useEffect(() => {
     if (!hydrated) return;
-    if (state.lines.length === 0) {
+    if (state.lines.length === 0 && !completingOrderRef.current) {
       router.replace("/cart");
     }
   }, [hydrated, state.lines.length, router]);
@@ -135,6 +137,7 @@ export default function CheckoutPage() {
       });
 
       if (response.status === 200) {
+        completingOrderRef.current = true;
         clear();
         router.push(`/checkout/success?ref=${encodeURIComponent(orderRef)}`);
       } else {
