@@ -11,6 +11,7 @@ export type MangoVariety = {
   description: string;
   imageUrl: string;
   ctaLabel: string;
+  tags?: ("sweet" | "tangySweet" | "popular" | "preorder")[];
 };
 
 export type MangoTestimonial = {
@@ -69,6 +70,7 @@ export const mangoVarieties: MangoVariety[] = [
     imageUrl:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDOFwYb9W2ChkxxLbvWJnIzpG97LdmZSclP9Wxe4p_fLnBAiVDYqSwrBmWKfrKJ_0vNLuneMNlpdTStWo0u_AwvGRP-M5Wj1Iym8I22InBK4Vo6lViN591c-WYkTkn2UrAfylkUne4KVH4iR7-xfZV_DB2QrTyJddKjWU8qmktDjDevQ5btmSYwjRWUASeL18HlO0OOGrw2YL96Ath__QvFM59WzZI2uFcxF7C0NGva_JzsBCeqTBhTRfIF0DcE3vYIZR7-8Jy5Brc",
     ctaLabel: "অর্ডার করুন",
+    tags: ["sweet", "popular"],
   },
   {
     name: "ল্যাংড়া",
@@ -79,6 +81,7 @@ export const mangoVarieties: MangoVariety[] = [
     imageUrl:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDWRxf6cG_sHCXzD0gxbl3hSBHhw0ZafL7VFiSgEBazGlipoZXDsvyi_ZQ65E6tMBCT71GY2cbOms1DsgZwp87EdduEVGMGb-AdzmqUBFo3MFjRL6BDz3JBnsNQcDUe_fGGYrmCQFrw6x93oV2PgjI4UdZfXD25qIH93Edl7ZafHe0VyH-VZuepfeLmonJslmaUNn7EaP9dMr_qFkJQU7XGsgfKjX1vSj6HKKO0JOHMm0Dbak9fJsp4IqnksndsARWKtLUvopmEtms",
     ctaLabel: "অর্ডার করুন",
+    tags: ["tangySweet", "popular"],
   },
   {
     name: "হিমসাগর",
@@ -89,8 +92,70 @@ export const mangoVarieties: MangoVariety[] = [
     imageUrl:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAzbJQw35_evRFib8b2g4-7YDKTvY8AJETsawdpaaBBqSQLlpb4ygYTINlcRZnkJ1qxvPT_2nmbcLBYKA_REFD69pm7WInM-DhwFB9PerDH8VqD8y9IFqZdJbAsGKH193r-W01MUUT5RS1PkfCs72bAY6zpA2luekDtU1jJW0eIPjK54DOJ-SbsyeaK70SiqziU2qJ6dIaEE67XDR5dxKQvPkPDEqbLB5H7IQYCUo7HcArt2gk19r7A09BrMCT9T1sJxprC5fntZyQ",
     ctaLabel: "প্রি-অর্ডার",
+    tags: ["sweet", "preorder"],
+  },
+  {
+    name: "ফজলী",
+    badge: { label: "বড় আকার", tone: "primary" },
+    price: { amount: 100, unitLabel: "/ কেজি" },
+    description: "আকারে বিশাল এবং বেশ মিষ্টি। এটি আমের অন্যতম জনপ্রিয় বড় জাত।",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDAwt3H3ul-Q8hcO6OGbyEpPELp_t8d0rav7Fm5RiyBEEB3IAJ3-rLrtmlJSzHzuXzNhxTY5xlq1owaggOlIjF7As7av8kxc4UuTttyduYgH9NQ1xG5iVhyFwVbQ7fuZwIc8ZoQ5U3SfyfpxqLdlZYiNXgWdSGTVR9I1WAtJymDktYwpCtfvnCaD6_ZjxtdkrY1WS8-WUl10BaQkzn15_Ozo94HGqF7aNfp508aDqJ3ftTtwYOD6yRqbYcgf1qbk1F477PxRwbHBMk",
+    ctaLabel: "অর্ডার করুন",
+    tags: ["tangySweet"],
+  },
+  {
+    name: "গোপালভোগ",
+    badge: { label: "আগাম জাত", tone: "secondary" },
+    price: { amount: 140, unitLabel: "/ কেজি" },
+    description:
+      "মৌসুমের শুরুতেই এই আমের স্বাদ নেয়া যায়। এটি অত্যন্ত মিষ্টি ও সুস্বাদু।",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCuk6D1IdYfKCdMHaJIv2ZEzHj1XH_AjP96kCcc_fWC3BX2R6S4q3NTKrd3XXmb9So2JBJrDv-7kn0Wztb3cfMVkSJLigLZJF7lAB2skX_Lr_cCDik4dcTJbFCMyiOfR0fs89Sb0mhLZyiyWg4j_mVhYDnr8O3f3ZfKnrp-z1e-mALBHmjsTLpx5qK3hp7EminSTbc1GjN_gCPjjJ0uimMoKI1S0NYwoktHmbfYyj4aVFXya-xAG3UjbozAUezzJoX1vPXSXk7U55g",
+    ctaLabel: "অর্ডার করুন",
+    tags: ["sweet", "popular"],
+  },
+  {
+    name: "ক্ষীরশাপাত",
+    badge: { label: "জিআই পণ্য", tone: "secondary" },
+    price: { amount: 145, unitLabel: "/ কেজি" },
+    description:
+      "অপূর্ব স্বাদ এবং গন্ধে ভরপুর। এর মিষ্টি স্বাদ আপনাকে মুগ্ধ করবেই।",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCY_C7KiSOV3mIUmq-LOMApRVNAeJfwmjMli75GPsognTbllY9Ws9x2F5GJFeRQnIZ8cPLEc4uBLykYyDQZOASL9j7eOsxe8NHvrpaZGzLx8wXf-cPdFucLA8-prDcLU6fEGT3wHv2rmLl9cpvtCTmdTbLVKqzytm6_cYq7W3Q7jMSnxIIRXWmEcnnInoPK8qEm101rhK54otY8Go7e7hFJdNtgDx58NM60z0bk8oYAAGqXfdgpYgaazh_Tn_lw-fgt5Ih26f9WWLQ",
+    ctaLabel: "অর্ডার করুন",
+    tags: ["sweet"],
+  },
+  {
+    name: "আশ্বিনী",
+    badge: { label: "নাবি জাত", tone: "primary" },
+    price: { amount: 90, unitLabel: "/ কেজি" },
+    description: "মৌসুমের শেষের দিকে এই আম পাওয়া যায়। বেশ বড় এবং মিষ্টি এই আম।",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuD7n3gZ9PR03v6SpMczxAqlKPQnZq3_pqrRAFm2-cSDu9JX_8RpxnsgSo48SykbFUwam05QLyhvyxnCJosx2KiWXAsr7AQ03KHvoh9W3GJAGbbXxZjrJGEsBlLlEDYqGXTE2KQQkYoN8ZQvLCDb5RBn8ZwZ6Wt6BVi3_-rSG7gdywzLrXgE6h_jj8XH8O_v_4CW_0OTFhVKknnT6xJ_8LWNv7DrWorVF-PmnddTjJTafNXJiWEWdu7O8ypa_r2MWMxkyYt7-EkXNa4",
+    ctaLabel: "অর্ডার করুন",
+    tags: ["tangySweet"],
+  },
+  {
+    name: "হাড়িভাঙ্গা",
+    badge: { label: "অনন্য স্বাদ", tone: "secondary" },
+    price: { amount: 125, unitLabel: "/ কেজি" },
+    description: "এর আকার এবং স্বাদ সম্পূর্ণ আলাদা। মাংসল এবং দারুণ মিষ্টি এই জাতটি।",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCwz3ZDy3KgWE-MGIW3ciAv4YfIqGKHev8RPXy9D3h41XVmWAZkpsPFfTcj5MjLQDgiBhWk8fT8iyatMS7tSTPEBO7QE-NdgzL_YuoSHVCENhvoG2uP74OyZk9MD1FBGfMKKDTWMkQSgEq0HNVR68bGtpKqrsnnwRl0lRIMq1p1cv_yg1vkHfxHDWr8khW6M2jROEyoPhaXAM9Ia6PBSZ971KK6TfiPDEvRcoBn44vKpjlo2TYDg4_LeCQiKVUpQ9TCgCdrACHznkg",
+    ctaLabel: "অর্ডার করুন",
+    tags: ["sweet"],
   },
 ];
+
+export const mangoHarvest = {
+  title: "হারভেস্ট আপডেট",
+  body: "এখন আমাদের বাগানে আমের ভরা মৌসুম চলছে। সতেজ আম পেতে দ্রুত অর্ডার করুন।",
+  percent: 75,
+  leftLabel: "মৌসুম শুরু",
+  centerLabel: "বর্তমান অবস্থা",
+  rightLabel: "মৌসুম শেষ",
+};
 
 export const mangoAbout = {
   eyebrow: "আমাদের কথা",

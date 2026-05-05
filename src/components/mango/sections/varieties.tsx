@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ShoppingCart, Bookmark } from "lucide-react";
 import MangoContainer from "../ui/mango-container";
-import MangoSectionHeading from "../ui/mango-section-heading";
 import MangoBadge from "../ui/mango-badge";
 import { mangoVarieties } from "../mango-data";
+import Image from "next/image";
 
 export default function MangoVarieties() {
   return (
@@ -20,7 +20,7 @@ export default function MangoVarieties() {
           </div>
 
           <Link
-            href="#varieties"
+            href="/mango/varieties"
             className="inline-flex items-center gap-2 text-[#7e5700] font-semibold hover:underline"
           >
             সবগুলো দেখুন
@@ -37,8 +37,10 @@ export default function MangoVarieties() {
                 className="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-shadow"
               >
                 <div className="relative h-60 overflow-hidden">
-                  <img
+                  <Image
                     src={v.imageUrl}
+                    width={500}
+                    height={500}
                     alt={`${v.name} mango`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
